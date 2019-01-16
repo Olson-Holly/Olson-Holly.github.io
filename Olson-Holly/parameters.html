@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+
+
+<script type="text/javascript">
+
+/*function myFunction(a, b) {
+ 
+  var x = myFunction(10, 3);
+ 
+  return a * b;
+}
+document.getElementById("demo").innerHTML = x;*/
+
+function myTacos(meat,produce){
+ console.log(meat); // writes “beef”
+ console.log(produce); // writes “onions”
+}
+myTacos(“beef”,”onions”);
+document.getElementById("divY").innerHTML = myTacos;
+
+</script>
+</head>
+<body>
+<button type = "button" onclick = "myTacos()">pushme</button>
+<p id="divY"></p>
+</body>
+</html>

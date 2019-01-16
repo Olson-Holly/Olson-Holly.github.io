@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<script type="text/javascript">
+
+function whileLoop(){
+   /* while - loops through a block of code while a specified condition is true*/
+  var words = ["do you love me?", "Do you want to be my friend?", "and if you do.", "well then"];
+  var text = "";
+  var i = 0;
+  while (i <words.length) {
+    text += words[i] + "<br>";
+    i++;
+  }
+  output = (text);
+  document.getElementById("whiDiv").innerHTML = text;
+}
+function whilesLoop(){  
+   var text = "";
+    var i = 0;
+    while (i < 5) {
+         text += "<br>The number is " + i;
+        i++;
+     if (i == 3) {
+         break;
+  }
+  output = (text);
+  document.getElementById("whileDiv").innerHTML = text;
+}
+}
+function decenDing(){
+    var word = ["how", "are", "you", "today"];
+    var text = "";
+    var len = word.length;
+  while (len--) {
+    text += word[len] + "<br>";
+  }
+  output = (text);
+  document.getElementById("decenD").innerHTML = text;
+}
+
+</script>
+</head>
+<body>
+    <h1>While Loop</h1>
+    <p>watch what I can do.</p>
+    <button type="button" onclick= "whileLoop()">push away</button>
+    <div id= "whiDiv"></div> 
+    <h2>while if loop</h2>
+    <button type="button" onclick = "whilesLoop()">give me a try</button>
+    <div id = "whileDiv"></div>
+    <h1>get decending array loop</h1>
+    <button type="button" onclick ="decenDing()">haha</button>
+    <div id= "decenD"></div>
+</body>
+</html>

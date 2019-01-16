@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<script type="text/javascript">
+
+/* The for statement creates a loop that is executed as long as a condition is true.
+for - loops through a block of code a number of times
+The loop will continue to run as long as the condition is true. It will only stop when 
+the condition becomes false.  The for loop allows you to go through the lists you might
+ have and will do it to the end, until it is no longer relavant*/
+
+function forLoop(){
+             var e = 20;
+             var result = "";
+             
+             for (i=1; i<=20; i++){
+                 result += e+ " x " +i+ " = " +(e*i)+ "<br/>";
+             }
+             output = (result);
+             document.getElementById("getDiv").innerHTML = result;
+            }
+
+function for10Loops(){
+            var b = 20;
+            var result = "";
+             
+             for (i=1; i<=10; i++){
+                 result += b+ " x " +i+ " = " +(b*i)+ "<br/>";
+             }
+             output = (result);
+             document.getElementById("getDivs").innerHTML = result;
+            }
+/*for - loops through a block of code a number of times
+You can also do this with a string of items*/
+
+function feelLoop(){
+            var feelings = ["happy", "sad", "mad", "glad", "whatevs"];
+            var feel = feelings.length;
+            var result = "";
+            
+            for (i=0; i<feel; i++) {
+                result += feelings[i] + "<br>";
+            }
+            output = (result);
+            document.getElementById("feelingGet").innerHTML = result;
+         }
+
+function feelingLoop(){
+    var feelings = ["happy", "sad", "mad", "glad", "whatevs"];
+            var feel = feelings.length;
+            var result = "";
+            
+            for (i=0; i<=2; i++) {
+                result += feelings[i] + "<br>";
+            }
+            output = (result);
+            document.getElementById("feelingGets").innerHTML = result;
+         }  
+/*for/in - loops through the properties of an object
+the for in loop allows you to easy write something out to be shown on the screen and 
+you can also add or take away from it*/
+function forInLoop(){
+        var txt = "";
+        var place = {cname:"UnitedStates<br>", sname:"Idaho<br>", tname:"Dietrich<br>"}; 
+        var x;
+        for (x in place) {
+             txt += place[x] + " ";
+        }
+            output = (txt);
+            document.getElementById("placeDiv").innerHTML = txt;
+        }
+
+function forInLoopAdding(){
+        var test = "";
+        var places = {cname:"UnitedStates<br>", sname:"Idaho<br>", tname:"Dietrich<br>", address:"611 East 270 South<br>"};
+        var t;
+        for (t in places) {
+            test += places[t] + "";
+        }
+        output = (test);
+        document.getElementById("placesDiv").innerHTML = test;
+}
+</script>
+</head>
+<body>
+   <h1>for loop</h1> 
+    <button type="button" onclick ="forLoop()">push me to see what I do!</button>
+    <div id= "getDiv"></div>
+    <h1>for 10 loop</h1> 
+    <button type="button" onclick ="for10Loops()">20 to 10</button>
+    <div id= "getDivs"></div>
+    <h2>string loop</h2>
+    <button type="button" onclick = "feelLoop()">feelings</button>
+    <div id= "feelingGet"></div>
+    <h2>string by number loop</h2>
+    <button type="button" onclick = "feelingLoop()">feelings</button>
+    <div id= "feelingGets"></div>
+    <h3>Where I am from</h3>
+    <button type="button" onclick = "forInLoop()">push me</button>
+    <div id= "placeDiv"></div>
+    <h3>Street address as well</h3>
+    <button type = "button" onclick = "forInLoopAdding()">smile</button>
+    <div id= "placesDiv"></div>
+</body>
+</html>

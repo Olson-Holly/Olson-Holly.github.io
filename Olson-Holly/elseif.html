@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<script type="text/javascript">
+
+function myFunction() {
+  var hour = new Date().getHours(); 
+  var greeting;
+  if (hour < 16) {
+    greeting = "yeah school";
+  } else {
+    greeting = "Now to relax";
+  }
+  document.getElementById("demo").innerHTML = greeting;
+}
+
+function myFunctions() {
+  var greeting;
+  var time = new Date().getHours();
+  if (time < 10) {
+    greeting = "Good morning";
+  } else if (time < 20) {
+    greeting = "Good day";
+  } else {
+    greeting = "Good evening";
+  }
+  document.getElementById("demos").innerHTML = greeting;
+}
+
+/* Defining Table
+* Input: Put in date to find out if you can sleep in
+* Processing: Computes if today is a day that you can sleep in
+* Output: Lets you know if you can sleep in or have to get up
+*/
+function sleepIn() {
+   //find out what day it is currently
+    var now = new Date();
+
+    //find out what the current month is
+    var month = now.getMonth();
+
+    //number the months from 0-11
+    var dayOfMonth = now.getDate();
+
+    //number the days of week from 0 = 6
+    var dayOfWeek = now.getDay();
+
+    //Determine if the current day is a day that you can sleep in
+    var message;
+    if ((dayOfWeek == 6) && (dayOfWeek == 0)) {
+       message = "Sleep in!";
+         }
+    else if ((month == 11) && (dayOfMonth == 25)) { 
+       message = "Sleep in.";
+    }
+    else if ((month == 6) && (dayOfMonth == 4)) {
+       message = "Sleep in.";
+    }
+    else if ((month == 0) && (dayOfMonth == 1)) {
+       message = "Sleep in.";
+    }
+    else {
+       message = "Get Up!";
+    }
+    
+    // Display the message to the user.
+    document.getElementById('outputDiv').innerHTML= message;
+        
+}
+</script>
+</head>
+<body>
+
+<p>Click the button to display a time-based greeting:</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p> 
+
+<p>Click the button to get a time-based greeting:</p>
+<button onclick="myFunctions()">Try it</button>
+<p id="demos"></p>
+
+<h1>Can I sleep in?</h1>
+<h2>Let's find out.</h2>
+<h3>Push the button.</h3>
+<button type="button" onclick="sleepIn()">button</button>
+<div id="outputDiv"></div>
+
+</body>
+</html>

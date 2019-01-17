@@ -7,6 +7,9 @@
     body{
         margin-left: 50px;
     }
+    div{
+        width: 200px;
+    }
 </style>
 <script type="text/javascript">
 
@@ -77,25 +80,28 @@ function sleepIn() {
 </script>
 </head>
 <body>
-
+  
 <h2>Is it Morning or Evening?</h2>
-<p>Use the if statement to specify a block of code to be executed, if a specified condition is true.
-   Use else to specify a block of code to be executed, if the same condition is false.</p>
+<div>This block of code uses the if statement to specify a block of code to be executed, 
+   if the condition is true. This code block also uses else to specify a block 
+   of code to be executed, if the same condition is false.</div>
 <button onclick="myFunction()">push me</button>
 <p id="demo"></p> 
 
 <h2>Is it Morning, Afternoon, or Evening?</h2>
-<p>Use the if statement to specify a block of code to be executed, if a specified condition is true.
-   Use else to specify a block of code to be executed, if the same condition is false.
-   Use else if to specify a new condition to test, if the first condition is false</p>
+<div>When using the if statement to specify a block of code to be executed, it only works if 
+   conditions are true.  The else if statement is used to specify a new condition to test,
+   if the first condition is false.  The else statement is to be used if the same condition
+   is false.</div>
 <button onclick="myFunctions()">push me</button>
 <p id="demos"></p>
 
 <h2>Can I sleep in?</h2>
-<p>Taking the if statment and else if statements that share a message when conditions are true, or the else message if the conditions
-  are false.</p>
+<div>This code uses if and else if statments to determine if the current day is on a weekend or holiday.
+If it isn't it tells you to get up.  If it is then you are told that you can sleep in.</div>
+
 <button type="button" onclick="sleepIn()">push me</button>
-<div id="outputDiv"></div>
+<div id="outputDiv"></div></div>
 
 </body>
 </html>

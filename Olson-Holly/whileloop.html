@@ -5,14 +5,14 @@
 <title>While loop</title>
 <style>
     body{
-        margin-left: 20px;
+        margin-left: 50px;
     }
 </style>
 <script type="text/javascript">
 
 function whileLoop(){
    /* while - loops through a block of code while a specified condition is true*/
-  var words = ["do you love me?", "Do you want to be my friend?", "and if you do.", "well then"];
+  var words = ["Do you love me?", "Do you want to be my friend?", "And if you do.", "Well then don't be afraid to take me by the hand."];
   var text = "";
   var i = 0;
   while (i <words.length) {
@@ -49,15 +49,17 @@ function decenDing(){
 </script>
 </head>
 <body>
-    <h1>While Loop</h1>
-    <p>watch what I can do.</p>
-    <button type="button" onclick= "whileLoop()">push away</button>
+    <h2>While Loop</h2>
+    <p>The While Loop runs through the array of answers, while the condition is true.</p>
+    <button type="button" onclick= "whileLoop()">push me</button>
     <div id= "whiDiv"></div> 
     <h2>while if loop</h2>
-    <button type="button" onclick = "whilesLoop()">give me a try</button>
+    <p>This also runs through the array of answers, until it is equal to the if statement in the code.</p>
+    <button type="button" onclick = "whilesLoop()">push me</button>
     <div id = "whileDiv"></div>
-    <h1>get decending array loop</h1>
-    <button type="button" onclick ="decenDing()">haha</button>
+    <h2>get decending array loop</h2>
+    <p>This runs like a normal while loop except in reverse</p>
+    <button type="button" onclick ="decenDing()">push me</button>
     <div id= "decenD"></div>
 </body>
 </html>

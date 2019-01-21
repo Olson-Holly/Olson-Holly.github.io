@@ -21,10 +21,10 @@
 <script>
 function test(){
   var txt = "";
-  var face = {scolor:"Caucasian", 
-              hcolor:"Dishwater Blonde", 
-              ecolor:"Brown",
-              complexion:"Alabaster"}; 
+  var face = {scolor:"caucasian", 
+              hcolor:"dishwater blonde", 
+              ecolor:"brown",
+              complexion:"alabaster"}; 
   var x;
     for (x in face) {
     txt += face[x] + " ";
@@ -50,6 +50,8 @@ function testIng(){
 </head>
 <body>
   <h2>JavaScript Object Properties</h2>
+  <p>Like parameters, properties of an object are not always seen until you run the program</p>
+  <p>You set a variable, then use the curly brackets, put the properties and then the values.</p>
   <p>This is what Holly looks like</p>
   <button onclick="test()">push me</button>
   <div id="face"></div> 

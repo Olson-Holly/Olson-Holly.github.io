@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 150px;
+          padding: 15px;
+        }
+    </style>
+<script type="text/javascript">
+
+function obJect(){
+    var text = "";
+    var child = {gender:"boy ", name:"Tommy John ", age:"2"};
+    var s;
+        for (s in child) {
+            text += child[s] + "";
+        }
+        output = (text);
+        document.getElementById("child").innerHTML = text;
+        }
+</script>
+</head>
+<body>
+  <h1>JavaScript Objects</h1>
+    <p>You create JavaScript objects using literal objects</p>
+    <p>example: var child = {gender:"boy", name:"Tommy John", age:"2"};,
+       This allows you to be able to see the objects when you push the button.</p>
+    <button onclick="obJect()">push me</button> 
+    <div id= "child"></div>
+    
+</body>
+</html>

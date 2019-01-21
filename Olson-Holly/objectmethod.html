@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 150px;
+          padding: 15px;
+        }
+    </style>
+<script type="text/javascript">
+
+function horseBreed(){
+    var horse = {
+    horseName: "Freckels",
+    horseBreed : "Arabian",
+    age    : 3,
+    information : function() {
+    return this.horseName + " " + this.age;
+  }
+};
+output = (horse);
+document.getElementById("breed").innerHTML = horse.information();
+}
+function horse(){
+    var horse = {
+    horseName: "Freckels",
+    horseBreed : "Arabian",
+    age    : 3,
+    information : function() {
+    return this.horseName + " " + this.horseBreed;
+  }
+};
+output = (horse);
+document.getElementById("breEd").innerHTML = horse.information();
+}
+</script>
+</head>
+<body>
+    <h2>JavaScript Object Method</h2>
+    <p>JavaScript methods are actions that can be performed on objects.</p>
+    <p>You use the keyword this, to show it refers to the owner object, example:
+        return this.horseName + "" + this.age;</p>
+    <button onclick="horseBreed()">push me</button>
+    <div id="breed"></div>
+
+    <p>You can change up what object is shown very easily by using the keyword this and
+        putting another object after it.</p>
+    <p>Example: return this.horseName + "" + this.horseBreed;</p>  
+    <button onclick="horse()">push me</button>  
+    <div id="breEd"></div>
+</body>
+</html>

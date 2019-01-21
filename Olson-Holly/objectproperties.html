@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 150px;
+          padding: 15px;
+        }
+</style>
+<script>
+function test(){
+  var txt = "";
+  var face = {scolor:"Caucasian", 
+              hcolor:"Dishwater Blonde", 
+              ecolor:"Brown",
+              complexion:"Alabaster"}; 
+  var x;
+    for (x in face) {
+    txt += face[x] + " ";
+    }
+output = (txt);
+document.getElementById("face").innerHTML = "Holly is " + face.scolor + " with " 
++ face.hcolor + " hair and " + face.ecolor + " eyes. " + "Holly has an " + face.complexion +
+ " complextion.";
+}
+function testIng(){
+    var text = "";
+    var faces = {scolor:"caucasian ", hcolor:"dishwater blonde hair ", ecolor:"brown eyes ", complexion:"alabaster skin"};
+    var s;
+        for (s in faces) {
+            text += faces[s] + "";
+        }
+        output = (text);
+        document.getElementById("face1").innerHTML = text;
+        }
+
+
+</script>
+</head>
+<body>
+  <h2>JavaScript Object Properties</h2>
+  <p>This is what Holly looks like</p>
+  <button onclick="test()">push me</button>
+  <div id="face"></div> 
+
+  <p>This is what Hollys features look like all run together without any explanation</p>
+  <button onclick="testIng()">push me</button>
+  <div id="face1"></div>
+  
+</body>
+</html>

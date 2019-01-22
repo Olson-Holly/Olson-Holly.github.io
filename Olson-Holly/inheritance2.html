@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 150px;
+          padding: 15px;
+        }
+        p{ 
+          width: 350px;
+        }
+</style>
+<script type="text/javascript">
+function perSon(){
+function Person(name, hair, age, eye) {
+  this.name = name;
+  this.hairColor = hair;
+  this.age = age;
+  this.eyeColor = eye;
+}
+var handle = document.getElementById("sis");
+
+Person.prototype.attitude = "Amazing";
+
+var mySister = new Person("Ginny Clause", "Red", 24, "brown");
+
+document.getElementById("sisTer").innerHTML =
+"My sister is " + mySister.attitude; 
+}
+</script>
+</head>
+<body>
+        <h2>JavaScript Inheritance</h2>
+        <p>When you use inheritance you are using a prototype of what you have done. You have your code written out with your properties
+          and values you want to use.  If you want to add a property you simply take the function name that has the parameters, properties,
+          and put a . then prototype then . then the new property you want to add.  Person.prototype.attitude = "Amazing";.  Then when you 
+          call the document you can make it play out the new property value like this document.getElementById.innerHTML= "My sister is" +
+          mySister.attitude; and it will show it on the screen when you push the button.</p>
+        <button type="button" onclick="perSon()">push me</button></p>
+        <div id="sisTer"></div>
+</body>
+</html>

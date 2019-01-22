@@ -23,31 +23,27 @@
 </style>
 <script type="text/javascript">
 function perSon(){
-function Person(name, haircolor, age, eye) {
-  this.name = name;
-  this.haircolor = hair;
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
   this.age = age;
   this.eyeColor = eye;
 }
-var handle = document.getElementById("sis");
+var handle = document.getElementById("dad");
 
-Person.prototype.attitude = "Amazing";
+Person.prototype.nationality = "English";
 
-var mySister = new Person("Ginny Clause", "Red", 24, "brown");
+var myFather = new Person("John", "Doe", 50, "blue");
 
-document.getElementById("sisTer").innerHTML =
-"My sister is " + mySister.attitude; 
+document.getElementById("daddy").innerHTML =
+"My father is " + myFather.nationality; 
 }
 </script>
 </head>
 <body>
         <h2>JavaScript Inheritance</h2>
-        <p>When you use inheritance you are using a prototype of what you have done. You have your code written out with your properties
-          and values you want to use.  If you want to add a property you simply take the function name that has the parameters, properties,
-          and put a . then prototype then . then the new property you want to add.  Person.prototype.attitude = "Amazing";.  Then when you 
-          call the document you can make it play out the new property value like this document.getElementById.innerHTML= "My sister is" +
-          mySister.attitude; and it will show it on the screen when you push the button.</p>
+        <p></p>
         <button type="button" onclick="perSon()">push me</button></p>
-        <div id="sisTer"></div>
+        <div id="daddy"></div>
 </body>
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 150px;
+          padding: 15px;
+        }
+        p{
+          width: 350px;
+        }
+    </style>
+<script type="text/javascript">
+
+function jasonParse(){
+  var text = '{"animal": "horses", "color": "brown", "food": "meat", "books": "what ever catches my facy."}';
+  var likes = JSON.parse(text);
+
+  document.getElementById('likes').innerHTML = "I like " + likes.animal + ", " + likes.color + ", " + likes.food + " and " + likes.books;
+}
+
+function jsonStringify(){
+   var likes = {animal:"horse", color:"brown", food:"meat", book:"what ever catches my fancy."};
+   var text = JSON.stringify(likes);
+
+   document.getElementById("like").innerHTML = text;
+}
+</script>
+</head>
+<body>
+  <h2>JSON Parse()</h2>
+  <p>This allows you to take a string received from a server and turn it into javascript code.</p>
+  <button type="button" onclick="jasonParse()">push me</button>
+  <div id= "likes"></div>
+  <h2>JSON.stringify()</h2>
+  <p>This takes JavaScript code and makes it into a string for the server</p>
+  <button type="button" onclick="jsonStringify()">push me</button>
+  <div id="like"></div>
+
+</body>
+</html>

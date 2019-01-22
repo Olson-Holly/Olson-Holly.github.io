@@ -20,13 +20,30 @@
         p{ 
           width: 350px;
         }
-    </style>
+</style>
 <script type="text/javascript">
+function perSon(){
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+var handle = document.getElementById("dad");
 
-function (){
-   
+Person.prototype.nationality = "English";
+
+var myFather = new Person("John", "Doe", 50, "blue");
+
+document.getElementById("daddy").innerHTML =
+"My father is " + myFather.nationality; 
 }
 </script>
 </head>
-<body></body>
+<body>
+        <h2>JavaScript Inheritance</h2>
+        <p></p>
+        <button type="button" onclick="perSon()">push me</button></p>
+        <div id="daddy"></div>
+</body>
 </html>

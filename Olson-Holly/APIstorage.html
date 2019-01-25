@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 150px;
+          padding: 15px;
+        }
+        p{
+          width: 350px;
+        }
+    </style>
+<script type="text/javascript">
+
+function localStorageObject(){
+    if (typeof(Storage) !== "undefined") {
+  // Code for localStorage/sessionStorage.
+       localStorage.setItem("emotion","happy");
+        document.getElementById('apI').innerHTML = localStorage.getItem("emotion"); 
+        } else {
+            document.getElementById('apI').innerHTML= "Sorry, not support Web Storage...";
+}     
+}
+function anotherWayForLSO(){
+    if (typeof(Storage) !== "undefined") {
+        localStorage.eMotion = "Sad";
+        document.getElementById('aPI').innerHTML = localStorage.eMotion;
+    } else {
+        document.getElementById('aPI').innerHTML = "DID NOT WORK";
+    }
+} 
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+function clickCounter1() {
+  if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    document.getElementById("results").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+  } else {
+    document.getElementById("results").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+
+</script>
+</head>
+<body>
+    <h2>API storage</h2>
+    <p>You can use local storage to let your computer browser to store data for you.</p>
+    <button type="button" onclick = "localStorageObject()">push me</button>
+    <div id= "apI"></div>
+    <p>Wrote another way to retrieve local storage.</p>
+    <button onclick="anotherWayForLSO()">push me</button>
+    <div id="aPI"></div>
+    <p>Using local storage click the button to see the counter increase.</p>
+    <p>because this is a a Local Storage when you close the tab and re open it, the count will start
+        where you left the number of clicks off the last time.</p>
+    <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+    <div id="result"></div>
+    <p>Using session storage click the button to see the counter increase.</p>
+    <p>Using session storage you close the browser and open it again and the counting will start again
+        from 1 as you are starting a new session.</p>  
+    <p><button onclick="clickCounter1()" type="button">Click me!</button></p>
+    <div id="results"></div>
+   
+</body>
+</html>

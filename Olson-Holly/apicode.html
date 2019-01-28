@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 150px;
+          padding: 15px;
+        }
+        p{
+          width: 350px;
+        }
+    </style>
+<script type="text/javascript">
+function localStorageObject(){
+    if (typeof(Storage) !== "undefined") {
+  // Code for localStorage/sessionStorage.
+       localStorage.setItem("emotion","happy");
+        document.getElementById('apI').innerHTML = localStorage.getItem("emotion"); 
+        } else {
+            document.getElementById('apI').innerHTML= "Sorry, not support Web Storage...";
+}     
+}
+function sessionStorageObject(){
+  if (typeof(Storage) !== "undefined") {
+  sessionStorage.setItem("emotion","happy");
+        document.getElementById('sapI').innerHTML = sessionStorage.getItem("emotion"); 
+        } else {
+            document.getElementById('sapI').innerHTML= "Sorry, not support Web Storage...";
+}     
+}
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+function clickCounter1() {
+  if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    document.getElementById("results").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+  } else {
+    document.getElementById("results").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+function arraYs(){
+    var names = ["Jonny", " Sugar", " Litte One", " Kinder"];
+      //names[0] = prompt("New member name?");
+      localStorage.setItem("names", JSON.stringify(names));
+    var storedNames = JSON.parse(localStorage.getItem("names"));
+    document.getElementById('arraYs').innerHTML = names;
+  }
+function trY(){
+  var animal = ["", "horse", "Dog", "cat"];
+  animal[0] = prompt("What is your favorite animal?");
+  localStorage.setItem("animal", JSON.stringify(animal));
+  var storedAnimal = JSON.parse(localStorage.getItem("animal"));
+  document.getElementById("try").innerHTML = animal;
+}
+function naMes(){
+    //var name = ["Jonny", " Sugar", " Litte One", " Kinder"];
+    //localStorage.setItem("name", JSON.stringify(name));
+      if (typeof(Storage) !== "undifined") {
+        localStorage.setItem("name","Little One");
+         document.getElementById('naMe').innerHTML = localStorage.getItem("name"); 
+        }
+}
+
+</script>
+</head>
+<body>
+    <h2>API storage</h2>
+    <p>You can use local storage to let your computer browser  store data for you.</p>
+    <button type="button" onclick = "localStorageObject()">push me</button>
+    <div id= "apI"></div>
+    <p>You can use session storage to let your computer browser  store data for you.  Thought this only lasts for the session, while the
+      tab is open.</p>
+    <button type="button" onclick = "sessionStorageObject()">push me</button>
+    <div id= "sapI"></div>
+    <p>Using local storage click the button to see the counter increase.</p>
+    <p>because this is a a Local Storage when you close the tab and re open it, the count will start
+        where you left the number of clicks off the last time.</p>
+    <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+    <div id="result"></div>
+    <p>Using session storage click the button to see the counter increase.</p>
+    <p>Using session storage you close the browser and open it again and the counting will start again
+        from 1 as you are starting a new session.</p>  
+    <p><button onclick="clickCounter1()" type="button">Click me!</button></p>
+    <div id="results"></div>
+    <p>When you push the button you will see the local storage members names.</p>
+    <button type="button" onclick="arraYs()">push me</button>
+    <div id="arraYs"></div>
+    <p>When you push the button you will be asked your favorite animal. When you put it in you will then see all the Local stored animal names plus the one you added.</p>
+    <button type="button" onclick="trY()">push me</button>
+    <div id="try"></div>
+    <p>Now push the button and we will get member #2's name</p>
+    <button type="button" onclick="naMes()">push me</button>
+    <div id="naMe"></div>
+</body>
+</html>

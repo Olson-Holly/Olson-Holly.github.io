@@ -21,12 +21,25 @@
           width: 350px;
         }
     </style>
-<script type="text/javascript">
 
-function (){
-   
-}
-</script>
 </head>
-<body></body>
+<body>
+  <div id="demo">Let AJAX change this text.</div>
+    <h2>The XMLHttpRequest Object</h2>
+    <button type="button" onclick="loadDoc()">Change Content</button>
+    
+    <script type="text/javascript">
+        function loadDoc() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("demo").innerHTML =
+              this.responseText;
+            }
+          };
+          xhttp.open("GET", "ajax_info.txt", true);
+          xhttp.send();
+        }
+        </script>
+</body>
 </html>

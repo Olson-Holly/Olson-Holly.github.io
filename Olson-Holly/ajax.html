@@ -44,55 +44,11 @@
             }
         ];
         
-    
-    // // myFunction(myArray);
-    
-    // // function myFunction(arr){
-    // //     var out = "";
-    // //     var i;
-    // //     for(i=0;i,arr.length;i++) {
-    // //         out += arr[i].jSon + arr[i].display;
-    // //     }
-    // //     document.getElementById('animal').innerHTML = out;
-    // // }
-    // // var xmlhttp = new XMLHttpRequest();
-    // // var txt = "myAnimals.txt";
-    // // xmlhttp.onreadyStatechange = function() {
-    // //     if(this.readyState ==4 && this.status == 200){
-    // //         var myArr = JSON.parse(this.responseText);
-    // //         myFunction(myArr);
-    // //     }
-    // // };
-    
-    // // xmlhttp.open("GET",txt, true);
-    // // xmlhttp.send();
-    
-    // //  var xmlhttp = new XMLHttpRequest();
-    // //  var jSon = "animal.JSON";
-    // //  xmlhttp.onreadystatechange = function(){
-    // //      if(this.readyState == 4 && this.status == 200) {
-    // //          var myArr = JSON.parse(this.responseText); 
-    // //          myFunction(myArr);
-    // //      }
-    // //  };
-    // //  xmlhttp.open("GET", jSon, true);
-    // // xmlhttp.send();
-    
-    // // function myFunction(arr) {
-    // //     var out = "";
-    // //     var i;
-    // //     for(i=0; i<arr.length; i++){
-    // //         out =+ arr[i].jSon + arr[i].display;
-    // //     }
-    // //     document.getElementById("animal").innerHTML = out;
-    // // }
-    
-       
-     var xhttp = new XMLHttpRequest();
-     xhttp.onreadystatechanage = function(){
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function(){
        if(this.readyState == 4 && this.status == 200) {
          var response = JSON.parse(xhttp.responseText);
-         var animal = response.animal;
+         var animal = response.myArray;
     
          var output = "";
          for(var i=0; i<anamil.length;i++) {

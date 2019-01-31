@@ -1,0 +1,21 @@
+{
+    "animal": [
+        {
+            "kind":"Cat",
+            "breed":"Hairless"
+        },
+        {
+            "kind":"Horse",
+            "breed":"Arabian"
+        },
+        {
+            "kind":"Dog",
+            "breed":"Huskey"
+        },
+        {
+
+            "kind":"Hippo",
+            "breed":"Huge =)"
+        }
+    ]
+}

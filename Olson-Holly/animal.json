@@ -16,6 +16,21 @@
 
             "kind":"Hippo",
             "breed":"Huge =)"
+        },
+        {
+
+            "kind":"Tiger",
+            "breed":"Siberian"
+        },
+        {
+
+            "kind":"Falcon",
+            "breed":"Parickan"
+        },
+        {
+            "kind":"Lion",
+            "breed":"big"
         }
+
     ]
 }

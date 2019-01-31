@@ -1,1 +1,9 @@
-this is comething
+So this is working but I don't understand why my other 
+code didn't work.  Very frustrating
+
+    {animals:
+    [
+       {
+        "Kind   
+       } 
+    ]}

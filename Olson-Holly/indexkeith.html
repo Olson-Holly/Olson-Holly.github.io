@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>AJAX and JSON</title>
+    </head>
+    <body>
+        <ul id="people"></ul>
+        <script>
+            var person = {
+                name: "Keith",
+                age: 38,
+                address: {
+                    street: "12345 Main St",
+                    city: "Boise"
+                },
+                children: ["John", "Susan"]
+            }
+            var people = [
+                {
+                    name: "John",
+                    age: 50
+                },
+                {
+                    name: "Paul",
+                    age: 60
+                }
+            ];
+            console.log(person.address.street);
+            
+            console.log(person.children);
+            
+            
+            
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response = JSON.parse(xhttp.responseText);
+                    var people = response.people;
+
+                    var output = '';
+                    //for loop
+                    for (var i = 0; i < people.length;i++) {
+                        
+                        
+                        
+                   
+                       
+                        output += '<li>' + people[i].name + '</li>';
+                    }
+                    document.getElementById('people').innerHTML = output;
+                }
+            };
+            xhttp.open("GET", "people.json", true);
+            xhttp.send();
+
+
+        </script>
+    </body>
+</html>
+
+

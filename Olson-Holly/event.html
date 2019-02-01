@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 150px;
+          padding: 15px;
+        }
+        p{
+          width: 350px;
+        }
+    </style>
+<script type="text/javascript">
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+function overDate() {
+  document.getElementById("over").innerHTML = Date();
+}
+function offDate() {
+  document.getElementById("off").innerHTML = Date();
+}
+function downDate() {
+  document.getElementById("down").innerHTML = Date();
+}
+function countTouches(event) {
+  var x = event.touches.length;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+</head>
+<body ontouchstart="countTouches(event)" ontouchend="countTouches(event)">
+  <h2>what different types of JavaScript Events can allow you to do. </h2>
+  <p>I will be using the button as my element and will be changing the 
+    event using the JavaScript Function.</p>
+  <p>Using onClick allows you to push the button and the date will appear.  button onClick="displayDate()".</p>
+  <button onclick="displayDate()">The time is?</button>
+  <div id="demo"></div>
+  <p>Using onMouseover the date will appear when you run your mouse over the button. button onMouseover="overDate()".</p>
+  <button onMouseover="overDate()">mouse over</button>
+  <div id="over"></div>
+  <p>Using onMouseout the date will appear when you take the mouse off of the button. button onMouseout="offDate()".</p>
+  <button onMouseout="offDate()">run mouse off</button>
+  <div id="off"></div>
+  <P>Using onKeydown you click the button and then push your down arrow.</P>
+  <button onKeydown="downDate()">click/ down arrow</button>
+  <div id="down"></div>
+  <p>This JavaScript event runs directly from the HTML body using onclick.</p>
+  <button onclick="document.getElementById('body').innerHTML=Date()">The time is?</button>
+  <div id='body'></div>
+  <h2>The TouchEvent's touches Property</h2>
+  <p>Touch somewhere in this document.</p>
+  <p>The number of fingers touching this document is currently <span id="demo">0</span>.</p>
+  <p>The touches property returns an array of touch objects, one for each finger that is currently touching the document.</p>
+  <p><strong>Note:</strong> Touch events works for touch devices only.</p>
+</body>
+</html>

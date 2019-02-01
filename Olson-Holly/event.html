@@ -35,13 +35,9 @@ function offDate() {
 function downDate() {
   document.getElementById("down").innerHTML = Date();
 }
-function countTouches(event) {
-  var x = event.touches.length;
-  document.getElementById("touch").innerHTML = x;
-}
 </script>
 </head>
-<body ontouchstart="countTouches(event)" ontouchend="countTouches(event)">
+<body>
   <h2>what different types of JavaScript Events can allow you to do. </h2>
   <p>I will be using the button as my element and will be changing the 
     event using the JavaScript Function.</p>
@@ -60,10 +56,5 @@ function countTouches(event) {
   <p>This JavaScript event runs directly from the HTML body using onclick.</p>
   <button onclick="document.getElementById('body').innerHTML=Date()">The time is?</button>
   <div id='body'></div>
-  <h2>The TouchEvent's touches Property</h2>
-  <p>Touch somewhere in this document.</p>
-  <p>The number of fingers touching this document is currently <span id="touch">0</span>.</p>
-  <p>The touches property returns an array of touch objects, one for each finger that is currently touching the document.</p>
-  <p><strong>Note:</strong> Touch events works for touch devices only.</p>
-</body>
+  </body>
 </html>

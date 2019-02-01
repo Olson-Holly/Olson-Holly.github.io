@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 150px;
+          padding: 15px;
+        }
+        p{
+          width: 350px;
+        }
+    </style>
+<script type="text/javascript">
+
+function countTouches(event) {
+  var x = event.touches.length;
+  document.getElementById("touch").innerHTML = x;
+}
+</script>
+</head>
+<body ontouchstart="countTouches(event)" ontouchend="countTouches(event)">
+    <h1>The TouchEvent's touches Property</h1>
+    <h2>Touch somewhere in this document.</h2>
+    <h2>The number of fingers touching this document is currently <span id="touch">0</span>.</h2>
+    <h2>The touches property returns an array of touch objects, one for each finger that is currently touching the document.</h2>
+    <h2><strong>Note:</strong> Touch events works for touch devices only.</h2>
+</body>
+</html>

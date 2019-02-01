@@ -35,6 +35,9 @@ function offDate() {
 function downDate() {
   document.getElementById("down").innerHTML = Date();
 }
+function myFunction() {
+  document.getElementById("onLoad").innerHTML = "Iframe is loaded.";
+}
 </script>
 </head>
 <body>
@@ -56,5 +59,8 @@ function downDate() {
   <p>This JavaScript event runs directly from the HTML body using onclick.</p>
   <button onclick="document.getElementById('body').innerHTML=Date()">The time is?</button>
   <div id='body'></div>
-  </body>
+  <p>This example demonstrates how to assign an "onload" event to an iframe element.</p>
+  <div id="onLoad"></div>
+  <iframe onload="myFunction()" src="family1.jpg" width= "500" height= "600"></iframe>
+</body>
 </html>

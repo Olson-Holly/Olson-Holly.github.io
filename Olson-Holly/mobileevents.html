@@ -33,6 +33,12 @@ function showCoordinates(event) {
   var y = event.touches[0].clientY;
   document.getElementById("demo").innerHTML = x + ", " + y;
 }
+function loadImage() {
+  alert("Image is loaded");
+}
+function myFunction() {
+  document.getElementById("onLoad").innerHTML = "Iframe is loaded.";
+}
 </script>
 </head>
 <body ontouchstart="countTouches(event)" ontouchend="countTouches(event)"
@@ -46,5 +52,9 @@ ontouchstart="showCoordinates(event)" ontouchmove="showCoordinates(event)">
     <h2>The horizontal and vertical coordinates of the touch are: <span id="demo"></span></h2>
     <h2><strong>Note:</strong> This examples uses touches<strong>[0]</strong> meaning that it will only show the coordinates of one finger (the first).</h2>
     <h2><strong>Note:</strong> Touch events works for touch devices only.</h2>
+    <img src="family1.jpg" onload="loadImage()" width="100" height="132">
+    <p>This example demonstrates how to assign an "onload" event to an iframe element.</p>
+    <iframe onload="myFunction()" src="family1.jpg" width= "500" height= "600"></iframe>
+    <div id="onLoad"></div>
 </body>
 </html>

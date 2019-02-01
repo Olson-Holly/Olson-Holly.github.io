@@ -37,7 +37,7 @@ function downDate() {
 }
 function countTouches(event) {
   var x = event.touches.length;
-  document.getElementById("demo").innerHTML = x;
+  document.getElementById("touch").innerHTML = x;
 }
 </script>
 </head>
@@ -62,7 +62,7 @@ function countTouches(event) {
   <div id='body'></div>
   <h2>The TouchEvent's touches Property</h2>
   <p>Touch somewhere in this document.</p>
-  <p>The number of fingers touching this document is currently <span id="demo">0</span>.</p>
+  <p>The number of fingers touching this document is currently <span id="touch">0</span>.</p>
   <p>The touches property returns an array of touch objects, one for each finger that is currently touching the document.</p>
   <p><strong>Note:</strong> Touch events works for touch devices only.</p>
 </body>

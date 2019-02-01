@@ -20,6 +20,24 @@
         p{
           width: 350px;
         }
+        #myDIV {
+        width: 50px;
+        height: 100px;
+        background: red;
+        -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+        transition: width 2s;
+        }
+        #myDIV:hover {
+        width: 400px;
+        }
+        #myDiv {
+        width: 50px;
+        height: 100px;
+        background: green;
+        }
+        #myDiv:hover {
+        width: 600px;
+        }
     </style>
 <script type="text/javascript">
 
@@ -34,6 +52,18 @@ function offDate() {
 }
 function downDate() {
   document.getElementById("down").innerHTML = Date();
+}
+function myFunction() {
+  this.innerHTML = "transitionend event occured - The transition has completed";
+  this.style.backgroundColor = "pink";
+  // Standard syntax
+document.getElementById("myDIV").addEventListener("transitionend", myFunction);
+}
+function myfUnction() {
+  this.innerHTML = "transitionend event occured - The transition has completed";
+  this.style.backgroundColor = "pink";
+  // Standard syntax
+document.getElementById("myDiv").addEventListener("transitionend", myFunction);
 }
 </script>
 </head>
@@ -56,5 +86,12 @@ function downDate() {
   <p>This JavaScript event runs directly from the HTML body using onclick.</p>
   <button onclick="document.getElementById('body').innerHTML=Date()">The time is?</button>
   <div id='body'></div>
+  <h2>JavaScript Transitions</h2>
+  <p>Hover over the div element below, and wait for the transition effect to end. In the purple
+    example the trasition is still in the css.  The green sample is running the same code without
+    the transition in the css.</p>
+  <div id="myDIV"></div>
+  <div id="myDiv"></div>
+  <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
 </body>
 </html>

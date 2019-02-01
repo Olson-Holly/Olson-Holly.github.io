@@ -28,13 +28,23 @@ function countTouches(event) {
   var x = event.touches.length;
   document.getElementById("touch").innerHTML = x;
 }
+function showCoordinates(event) {
+  var x = event.touches[0].clientX;
+  var y = event.touches[0].clientY;
+  document.getElementById("demo").innerHTML = x + ", " + y;
+}
 </script>
 </head>
-<body ontouchstart="countTouches(event)" ontouchend="countTouches(event)">
+<body ontouchstart="countTouches(event)" ontouchend="countTouches(event)"
+ontouchstart="showCoordinates(event)" ontouchmove="showCoordinates(event)">
     <h1>The TouchEvent's touches Property</h1>
     <h2>Touch somewhere in this document.</h2>
     <h2>The number of fingers touching this document is currently <span id="touch">0</span>.</h2>
     <h2>The touches property returns an array of touch objects, one for each finger that is currently touching the document.</h2>
+    <h2><strong>Note:</strong> Touch events works for touch devices only.</h2>
+    <h2>Touch somewhere in this document.</h2>
+    <h2>The horizontal and vertical coordinates of the touch are: <span id="demo"></span></h2>
+    <h2><strong>Note:</strong> This examples uses touches<strong>[0]</strong> meaning that it will only show the coordinates of one finger (the first).</h2>
     <h2><strong>Note:</strong> Touch events works for touch devices only.</h2>
 </body>
 </html>

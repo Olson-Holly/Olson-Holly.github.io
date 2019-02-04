@@ -21,22 +21,40 @@
           width: 350px;
         }
         #myDIV {
-        width: 50px;
+        width: 100px;
         height: 100px;
         background: red;
-        -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
         transition: width 2s;
         }
-        #myDIV:hover {
-        width: 400px;
-        }
-        #myDiv {
+       #myDIV:hover {
+       width: 400px;
+       }
+       #myDiv {
         width: 50px;
-        height: 100px;
+        height: 50px;
         background: green;
         }
-        #myDiv:hover {
-        width: 600px;
+
+       #myDiv:hover {
+       width: 400px;
+       }
+        #myContainer {
+         width: 500px;
+         height: 150px;
+         position: relative;
+         background: blueviolet;
+        }
+        #myAnimation {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        background: green;
+         }
+        #animation {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-color: purple;
         }
     </style>
 <script type="text/javascript">
@@ -53,18 +71,34 @@ function offDate() {
 function downDate() {
   document.getElementById("down").innerHTML = Date();
 }
-function myFunction() {
-  this.innerHTML = "transitionend event occured - The transition has completed";
-  this.style.backgroundColor = "pink";
-  // Standard syntax
-document.getElementById("myDIV").addEventListener("transitionend", myFunction);
-}
-function myfUnction() {
-  this.innerHTML = "transitionend event occured - The transition has completed";
-  this.style.backgroundColor = "pink";
-  // Standard syntax
-document.getElementById("myDiv").addEventListener("transitionend", myFunction);
-}
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = -12;
+  var id = setInterval(frame, 25);
+  function frame() {
+    if (pos == 130) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+ }
+  function upMove() {
+  var up = document.getElementById("animation");
+  var poss = -50;
+  var me = setInterval(trip, 10);
+  function trip() {
+  	if (poss == 150) {
+    	clearInterval(me);
+        }else{
+        poss++;
+        up.style.top = poss + 'px';
+        up.style.right = poss + 'px';
+        }
+    }
+  }  
 </script>
 </head>
 <body>
@@ -86,12 +120,35 @@ document.getElementById("myDiv").addEventListener("transitionend", myFunction);
   <p>This JavaScript event runs directly from the HTML body using onclick.</p>
   <button onclick="document.getElementById('body').innerHTML=Date()">The time is?</button>
   <div id='body'></div>
-  <h2>JavaScript Transitions</h2>
-  <p>Hover over the div element below, and wait for the transition effect to end. In the red
-    example the trasition is still in the css.  The green example is running the same code without
-    the transition in the css.</p>
+  <h2>JavaScript Transitions and Animation</h2>
+  <p>Instead of having a button to call your function you have to call your function in 
+    the document.getElementById.  here instead of putting .innerHTML you put
+    .addEventListener(then you put your function here);.  You have to make sure you put a transition
+    in your css or it will not work as shown in the green box.</p>
   <div id="myDIV"></div>
   <div id="myDiv"></div>
-  <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+<script>
+document.getElementById("myDIV").addEventListener("transitionend", myFunction);
+function myFunction() {
+  this.innerHTML = "transitionend event occured and completed. I can write here what I want to say at trasition end.";
+  this.style.backgroundColor = "pink";
+}
+document.getElementById("myDiv").addEventListener("transitionend", myFunction);
+function myFunction() {
+  this.innerHTML = "transitionend event occured and completed. I can write here what I want to say at trasition end.";
+  this.style.backgroundColor = "pink";
+}
+</script>
+  <p>I am kindof a really boring animation but I animate! Green - even though
+    I am sitting in the top left corner, I will got out of the box -10px and then through it.
+    Purple - even though I am sitting ontop of the green box in the left corner, I will be comming
+    -50px out side the box from the top right then on through the contaner.  If I had left their positions
+    0px they both would have started at the top left and right corners.</p>
+    <button onClick="myMove()">Click Me</button> 
+    <button onMouseover="upMove()">go over</button>
+    <div id ="myContainer">
+    <div id ="myAnimation"></div>
+    <div id ="animation"></div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 200px;
+          padding: 15px;
+        }
+    </style>
+<script type="text/javascript">
+function myButton() {
+  var bot = document.createElement("BUTTON");  // Create a <button> element
+  var t = document.createTextNode("I am new"); // Create a text node
+  bot.appendChild(t);                          // Append the text to <button> 
+  document.getElementById("bot").appendChild(bot);              // Append <button> to <body>
+}
+function myFunction() {
+  var para = document.createElement("p");
+  var t = document.createTextNode("HI everyone, I am the created text in side the p element but only appear when you push the button, crazy I know but really cool.");
+  para.appendChild(t);
+  document.getElementById("para").appendChild(para);
+}
+</script>
+</head>
+<body>
+   <div id="div1">
+    <p id="p1">I come after the created text node because they call me after
+        the created text node that was appended to the createElement, like This
+        element.insertBefore(para,child);</p>
+    <p id="p2">That allows the created text node to appear before us, as you see from the exampe above That
+      var element was inserted before the para and its child, which I am.</p> 
+   </div>
+   <p>I was not put in the node div =(.</p>
+   <script>
+    var para = document.createElement("p");
+    var node = document.createTextNode("I am the created text NODE.");
+    para.appendChild(node);
+    var element = document.getElementById("div1");
+    var child = document.getElementById("p1");
+    element.insertBefore(para,child);
+    </script>
+    <h4>One interesting thing about using a button to create something else is that
+    you can push on it as many times as you like and it will keep spitting out 
+    the answer</h4>
+    <h5>Click the button to make a another button appear next to it.</h5>
+    <button onclick="myButton()">Push me</button>
+    <div id = "bot"></div>
+    <p>Click the button to create a P element with some text.</p>
+    <button onclick="myFunction()">Push me</button>
+    <div id = "para"></div>
+</body>
+</html>

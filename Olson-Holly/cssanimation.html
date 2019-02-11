@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+body{
+     margin-left: 50px;
+} 
+button{
+     margin-bottom: 10px;
+}
+p {
+    width: 250px;
+}
+div{
+    margin-bottom: 50px;
+    background: lightyellow;
+    border: 1px solid black;
+    width: 150px;
+    padding: 15px;
+}
+#circle {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    border-radius: 50%;
+    animation-name: trying;
+    animation-duration: 8s;      
+}
+@keyframes trying {
+    from {background-color: purple;}
+    to {background-color: yellow;}
+}
+#square{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    animation-name: working;
+    animation-duration: 8s;
+}
+  @keyframes working{
+    from {background-color: yellow;}
+    to {background-color: purple;}
+}
+#parallelogram{
+    width: 100px;
+	height: 50px;
+	transform: skew(20deg);
+	background: pink;
+    position: relative;
+    animation-name: yeehaw;
+    animation-duration: 10s;
+}
+@keyframes yeehaw {
+  0%   {background-color: pink; left:0px; top:0px;}
+  25%  {background-color: yellow; left:200px; top:10px;}
+  50%  {background-color: blue; left:150px; top:200px; }
+  75%  {background-color: purple;left:0px; top:200px; }
+  100% {background-color: green; left:0px; top:0px;}
+}
+#c {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    border-radius: 50%;
+    position: relative;
+    animation-name: t;
+    animation-duration: 5s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes t {
+  0%   {background-color: pink; left:0px; top:0px;}
+  25%  {background-color: yellow; left:300px; top:10px;}
+  50%  {background-color: blue; left:150px; top:200px; }
+  75%  {background-color: purple;left:0px; top:200px; }
+  100% {background-color: green; left:0px; top:0px;}
+}
+#s {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    position: relative;
+    animation-name: w;
+    animation-duration: 8s;
+    animation-delay: -2s;
+    animation-iteration-count: 2;
+}
+@keyframes w {
+  0%   {background-color: pink; left:0px; top:0px;}
+  25%  {background-color: yellow; left:250px; top:10px;}
+  50%  {background-color: blue; left:150px; top:200px; }
+  75%  {background-color: purple;left:0px; top:200px; }
+  100% {background-color: green; left:0px; top:0px;}
+}
+#p{
+    width: 100px;
+	height: 50px;
+	transform: skew(20deg);
+	background: pink;
+    position: relative;
+    animation-name: y;
+    animation-duration: 10s;
+    animation-delay:2s;
+    animation-iteration-count: 1;
+}
+@keyframes y {
+  0%   {background-color: pink; left:0px; top:0px;}
+  25%  {background-color: yellow; left:100px; top:10px;}
+  50%  {background-color: blue; left:150px; top:200px; }
+  75%  {background-color: purple;left:0px; top:200px; }
+  100% {background-color: green; left:0px; top:0px;}
+}
+#cir{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    border-radius: 50%;
+    position: relative;
+    animation-name: t;
+    animation-duration: 5s;
+   /*animation-delay: 4s;*/
+    /* animation-iteration-count: infinite; */
+    animation-direction: reverse;
+}
+@keyframes t {
+  0%   {background-color: pink; left:0px; top:0px;}
+  25%  {background-color: yellow; left:200px; top:0px;}
+  50%  {background-color: blue; left:200px; top:200px; }
+  75%  {background-color: purple;left:0px; top:200px; }
+  100% {background-color: green; left:0px; top:0px;}
+}
+#squ{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;  
+}
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:pink; left:0px; top:0px;}
+}
+#para{
+  width: 100px;
+  height: 100px;
+  transform: skew(20deg);
+  background-color: pink;
+  position: relative;
+  animation-name: y;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate-reverse;  
+}
+@keyframes y {
+  0%   {background-color: pink; left:0px; top:0px;}
+  25%  {background-color: yellow; left:200px; top:10px;}
+  50%  {background-color: blue; left:200px; top:200px; }
+  75%  {background-color: purple;left:0px; top:200px; }
+  100% {background-color: green; left:0px; top:0px;}
+}
+object {
+  width: 500px;
+  height: 150px;
+  transform: skew(20deg);
+  background-color: lightblue;
+  font-weight: bold;
+  position: relative;
+  animation: myobject 5s infinite;
+}
+#object1 {animation-timing-function: linear;}
+#object2 {animation-timing-function: ease;}
+@keyframes myobject {
+  from {background-color: aliceblue; left: 0px;}
+  to {background-color: aqua; left: 400px;}
+}
+span {
+  width: 175px;
+  height: 150px;
+  border-radius: 75%;
+  background-color:  orangered;
+  font-weight: bold;
+  position: relative;
+  animation: myspan 5s infinite;
+}
+#span1 {animation-timing-function: ease-in;}
+#span2 {animation-timing-function: ease-out;}
+#span3 {animation-timing-function: ease-in-out;}
+@keyframes myspan {
+  from {background-color: orange; left: 0px;}
+  to {background-color: violet;left: 500px;}
+}
+#foreward{
+  width: 100px;
+  height: 100px;
+  background: blue;
+  position: relative;
+  animation-name: foreward;
+  animation-duration: 3s;  
+  animation-fill-mode: forwards;
+}
+@keyframes foreward {
+  from {top: 0px;}
+  to {top: 200px; background-color: yellow;}
+}
+#both{
+  width: 100px;
+  height: 100px;
+  background:blue;
+  position: relative;
+  animation-name: both;
+  animation-duration: 3s;  
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+@keyframes both {
+  from {top: 0px; background-color: yellow;}
+  to {top: 150px; background-color: red;}
+}
+
+#backward{
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  position: relative;
+  animation-name: backward;
+  animation-duration: 3s;  
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+@keyframes backward {
+  from {top: 10px; background-color:blue;}
+  to {top: 250px;}
+}
+
+    </style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+  <h2>CSS3 ANIMATION</h2>
+  <p>This example takes the circle and square and changes their original
+    colors and then changes them to a different color.  When it has run it will go 
+    back to its original color.  I made it so that the circle and square will animate 
+    completly in 8 seconds.</p>
+  </p>
+  <div id="circle"></div>
+  <p></p>
+  <div id="square"></div> 
+  <p>This parallelogram changes as many colors as you would like to program it to
+      by using percentages in the keyframe isntead of from and to.  The parallelogram
+      also moves intime to the percentages as you write the position in the code in 
+      the keyframe along with the color percentage.</p>
+  <div id="parallelogram"></div> 
+  <p>Now you can make those moving shapes delay when they start and if you use a
+      negative number to start the shape will not start at the beging, it will start
+      in the frame at that negative point.  All you have to do is use animation-delay. 
+      Here you see three objects, they all start their animation at different position 
+      because I gave them all animation delay. I also added animation-iteration-count to say
+      how long I want them to do their animation.  Because I have one animation-iteration-count
+      as infinite it will continue to run as I do the program.</p> 
+   <div id="c"></div><div id="s"></div><div id="p"></div>
+   <p></p>
+   <p>Run Animation in Reverse Direction or Alternate Cycles</p>
+   <p>This allows you to make your animation play forwards, backward,
+       or in different patterns.</p>
+    <div id="cir"></div><div id="squ"></div><div id="para"></div>
+  <p>Animated Timing Function. and the shapes will show and tell you all you need to know.</p>
+  <object id="object1">linear.<br> I am the same from start to finish</object><p></p>
+  <object id="object2">ease. I stary slow, then fast, then end slowly</object><p></p>
+  <span id="span1">ease-in. I start slow</span><p></p>
+  <span id="span2">ease-out. I end slow</span><p></p>
+  <span id="span3">ease-in-out. I start slow, speed up, and then end slow</span>
+  <p>I know there is alot about css animation you can do but I wanted to let you all know
+      the cool things you could do with it.</p>
+  <p>animation-fill-mode is the last property we will talk about for css animation.  It allows
+     the element to retain the style values set by the last keyframe. foreward and backward depend
+     on the animation-direction and foreward also depends on the animation-iteration-count.  Using both
+     allow the animation to follow the rules for both forwards and backwards.</p>  
+     <div id="foreward">using foreward</div>
+     <div id="backward">using backward</div>
+     <div id="both">using both</div>
+
+</body>
+</html>

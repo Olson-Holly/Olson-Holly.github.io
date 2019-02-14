@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 150px;
+          padding: 15px;
+        }
+        p{
+          width: 350px;
+        }
+    </style>
+<script>
+    var onPlayerReady = function(event) {
+      event.target.playVideo();  
+};
+
+// The first argument of YT.Player is an HTML element ID. 
+//YouTube API will replace my <div id="player"> tag with an 
+//iframe containing the youtube video.
+var player = new YT.Player('player', {
+    height: 320,
+    width: 400,
+    videoId : 'm86ae_e_ptU',
+    events : {
+        'onReady' : onPlayerReady
+    }
+ });
+</script>
+</head>
+<body>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <p id="player"></p>
+</body>
+
+</html>

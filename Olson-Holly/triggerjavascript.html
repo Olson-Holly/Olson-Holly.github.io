@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 150px;
+          padding: 15px;
+        }
+        p{
+          width: 350px;
+        }
+       #box1{
+          background: lightblue;
+          width: 300px;
+          height: 200px;
+        }
+        #box2{
+          background: rgb(231, 98, 180);
+          width: 300px;
+          height: 200px;
+          overflow: hidden;
+        } 
+        #box3{
+          background: blueviolet;
+          width: 300px;
+          height: 200px;
+          position: absolute;
+          top: 450px;
+          left: -300px;
+        }  
+       #circle1{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%; 
+        border: 2px solid lightblue;
+       }
+       #parallel{
+        width: 200px;
+	    height: 150px;
+	    transform: skew(20deg);
+	    background: pink;
+       }
+    </style>
+<script type="text/javascript">
+
+function ovEr(shape,colors){
+   var box = document.getElementById(shape);
+   //tranasition settings in short hand css in one line
+   //transition property = background, duration of animation(how long it takes to occure)= 8s,
+   //type of animation(helps control how the animation works), animation delay= 1s(seconds that pass before animation starts). 
+   box.style.transition = "background 8s ease-out 1s";
+   box.style.background = colors;
+}
+function cirCle(shapes,color){
+   var cir = document.getElementById(shapes);
+   cir.style.transition = "background 3s linear 0s";
+   cir.style.background = color;
+}
+function fadeOut(el){
+   var elem = document.getElementById(el);
+   elem.style.transition = "opacity 8s linear 0s";
+   elem.style.opacity = 0;
+}
+function fadeIn(el){
+   var elem = document.getElementById(el);
+   elem.style.transition = "opacity 6s linear 0s";
+   elem.style.opacity = 1;
+}
+function slideOpen(slide){
+   var sli = document.getElementById(slide);
+   sli.style.transition = "height 3s linear 0s";
+   sli.style.height = "200px";
+}
+function slideClosed(slide){
+   var sli = document.getElementById(slide);
+   sli.style.transition = "height 3s linear 0s";
+   sli.style.height = "50px";
+}
+function slideIn(sli){
+   var slide = document.getElementById(sli);
+   slide.style.transition = "left 5s ease-in 0s";
+   slide.style.left = "0px";
+}
+function slideOut(sli){
+   var slide = document.getElementById(sli);
+   slide.style.transition = "left 5s ease-out 0s";
+   slide.style.left = "-400px";
+}
+
+</script>
+</head>
+<body>
+    <p></p>
+      <div id="box1">This is my box that is going to show you the css transition and animation trigger with JavaScript.<p></p>
+      The button allows you to trigger the animation using JavaScript.<p></p> Using transition in your JavaScript code allows
+      the animation to not to all happen at once.  The transition changes the animation from the original color to another color.</div>
+      <button type="button" onclick="ovEr('box1','magenta')">Magenta</button>
+      <button type="button" onclick="ovEr('box1','orange')">Orange</button>
+      <button type="button" onclick="ovEr('box1','black')">Black</button>
+      <button type="button" onclick="ovEr('box1','lightblue')">original</button>
+      <p>With the push of the buttons you make the square come in and then leave.</p>
+        <div id="box3"></div>
+        <button type="button" onclick="slideIn('box3')">Watch me come in.</button>
+        <button type="button" onclick="slideOut('box3')">Watch me leave.</button>
+      <p>This circle is going to use the same properties as above to change the colors of the rainbow.</p>
+      <div id="circle1"></div>
+      <button type="button" onclick="cirCle('circle1','red')">Red</button>
+      <button type="button" onclick="cirCle('circle1','orange')">Orange</button>
+      <button type="button" onclick="cirCle('circle1','yellow')">Yellow</button>
+      <button type="button" onclick="cirCle('circle1','green')">Green</button>
+      <button type="button" onclick="cirCle('circle1','blue')">Blue</button>
+      <button type="button" onclick="cirCle('circle1','purple')">Purple</button>
+      <p>This box will fade out with the first button and then back in with the second button.</p>
+      <div id="parallel"></div>
+      <button type="button" onclick="fadeOut('parallel')">Watch me disapear.</button>
+      <button type="button" onclick="fadeIn('parallel')">Watch me re-appear.</button>
+      <p>With the push of the button you will make the box bigger or smaller.</p>
+      <div id="box2"></div>
+      <button type="button" onclick="slideClosed('box2')">Watch me shrink.</button>
+      <button type="button" onclick="slideOpen('box2')">Watch me grow.</button>
+      
+</body>
+</html>

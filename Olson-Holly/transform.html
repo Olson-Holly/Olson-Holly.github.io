@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: rgb(35, 182, 157);
+          border: 6px solid rgb(183, 247, 236);
+          width: 150px;
+          height: 50px;
+          padding: 15px;
+        }
+        p{
+          width: 350px;
+        }
+       #rectangle{
+          transform: rotate(50deg);
+        }
+       #rec{
+          transform: rotate(-50deg);
+        }
+       #translate{
+           width: 150px;
+           height: 150px;
+           background-color: yellowgreen;
+           border: 6px solid yellow;
+       }
+       #tran{
+           width: 150px;
+           height: 150px;
+           background-color: yellowgreen;
+           border: 6px solid yellow;  
+           transform: translate(150px,20px);
+       }
+       #para{
+           width: 100px;
+	       height: 100px;
+           background: pink;
+           border: 6px solid violet;
+       }
+       #parallelagram{
+           width: 100px;
+	       height: 100px;
+           background: pink;
+           border: 6px solid violet;
+	       transform: skew(30deg);
+       } 
+      #scale{
+           width: 200px;
+           height: 100px;
+           background-color: rgb(209, 68, 68);
+           border: 1px solid rgb(243, 252, 118);
+      }
+      #sc{
+           width: 200px;
+           height: 100px;
+           background-color: rgb(209, 68, 68);
+           border: 1px solid rgb(243, 252, 118);
+           margin:10px;
+           /*element to be two times of its original width, and three times of its original height */
+           transform: scale(1.5,2);
+      }
+      #ale{
+           width: 200px;
+           height: 100px;
+           background-color: rgb(209, 68, 68);
+           border: 1px solid rgb(243, 252, 118);
+           /* is decreased to be half of its original width and height. */
+           transform: scale(.5,.5);
+      }
+     #matrix{
+           background-color: rgb(255, 0, 221);
+           border: 6px solid rgb(228, 129, 198);  
+     }
+     #mat{
+           background-color: rgb(255, 0, 221);
+           border: 6px solid rgb(228, 129, 198);
+           transform: matrix(1, -0.3, 0, 1, 40, 0);
+     }
+     #rix{
+           background-color: rgb(255, 0, 221);
+           border: 6px solid rgb(228, 129, 198);
+           transform: matrix(1, 0, 0.5, 1, 150, 0);
+     }
+    </style>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+    <h2>Transform method()</h2>
+    <p>I am using the rotate method to take the shape from the normal
+        position and rotate it clockwise and counter clockwise.</p>
+    <div>This is at normal position</div>
+    <div id="rectangle">transform: rotate(50deg);.</div>
+    <div id="rec">transform: rotate(-50deg);.</div>
+    <h2>Matrix method()</h2>
+    <p>I am using the matrix method to take the shape from the normal
+        position and shift it clockwise and counter clockwise.</p>
+    <div id="matrix">This is at normal position</div>
+    <div id="mat">transform: matrix(1, -0.3, 0, 1, 40, 0);.</div>
+    <div id="rix">transform: matrix(1, 0, 0.5, 1, 150, 0);.</div>
+    <h2>translate method()</h2>  
+    <p>I use this method to take the original shape from one position to 
+        another.</p> 
+    <div id="translate">The position I am in before the translate.</div>
+    <div id="tran">I am now 150px to the right and 20px down.<p></p> transform: translate(150px,20px);</div>
+    <h2>Skew method()</h2>
+    <p>How to go from a square to a parallelagram using the skew method.</p>
+    <div id="para">I am the square.</div>
+    <div id="parallelagram">I used the skew method and am now a parallelagram.</div>
+    <h2>Scale method()</h2>
+    <p>How to get a rectangle to grow and shrink using the scale method.</p>
+    <div id="scale">I am the rectangle.</div>
+    <p>Now you see the increase and the decrease.</p>
+    <div id="sc">I increase with scale.</div>
+    <div id="ale">I decrease with scale.</div>
+</body>
+</html>

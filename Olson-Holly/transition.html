@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 150px;
+          padding: 15px;
+        }
+        p{
+          width: 350px;
+        }
+        #picture{
+            width: 50px;
+            height: 70px;
+            padding-top: 30px;
+            padding-left: 30px;
+            transition: width 6s, height 6s;
+        }
+        #picture:hover{
+            width: 300px;
+            height: 350px;
+        }
+        #madison{
+            width: 75px;
+            height: 75px;
+            padding-top: 15px;
+            padding-left: 15px;
+            transition: width 4s, height 4s, transform 4s;
+            }
+        #madison:hover{
+            width: 275px;
+            height: 275px;
+            transform: rotate(360deg);
+        } 
+        div{
+            width: 150px;
+            height: 50px;
+            background-color:rgb(226, 125, 43);
+            background-image: linear-gradient(to right, rgb(226, 125, 43) , red);
+            transition: width 4s;       } 
+        #circle1{transition-timing-function: linear;} 
+        #circle2{transition-timing-function: ease;}
+        #circle3{transition-timing-function: ease-in;}
+        #circle4{transition-timing-function: ease-out;}
+        #circle5{transition-timing-function: ease-in-out;}
+        #circle1:hover,#circle2:hover,#circle3:hover,#circle4:hover,#circle5:hover{
+            width: 500px;
+        }
+    </style>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+    <h2>Transitions</h2>
+    <p>Hover over me to watch my family grow is size, literally, not figurativly.
+        When you take the mouse off the picutre, we shrink.</p>
+    <img id="picture" src="family1.jpg" alt="Family Picture">
+    <h2>Transition and Transform</h2>
+    <p>This will take the picture of my little one and make her grow and spin, when you 
+        hover over her with the mouse.</p>
+    <img id="madison" src="madison.JPG" alt="My little one">
+    <h2>Transition timing function</h2>
+    <p>Depending on what timing function you are using, the picture will stretch out in 
+        different speeds.</p>
+    
+    <div id="circle1" >linear</div><P></P>
+    <div id="circle2" >ease</div><p></p>
+    <div id="circle3" >ease-in</div><p></p>
+    <div id="circle4" >ease-out</div><p></p>
+    <div id="circle5" >ease-in-out</div><p></p>
+    
+</body>
+</html>

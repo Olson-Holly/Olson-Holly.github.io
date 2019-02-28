@@ -29,9 +29,19 @@ document.write("You know it is interesting because I know someone by the name "+
 document.write(name+" and I grew up together."+"<br>");
 document.write("Hmm, maybe you know each other.");
 
+var form = document.getElementById('name-form');
+form.onsubmit = function(e) {
+    e.preventDefault();
+    console.log(gorm.fullName.value);
+};
+
 </script>
 </head>
 <body>
-  
+    <form id="name-form">
+  <label>your full name</label><br>
+  <input type="text" name="fullname"><br>
+  <input type="submit" value="Submit">
+</form>
 </body>
 </html>

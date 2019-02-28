@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+            background-color:chartreuse
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 150px;
+          padding: 15px;
+        }
+        p{
+          width: 350px;
+        }
+        #demo{
+            font-family: 'Laila', serif;
+            font-size: 50px;
+            color: blue ;
+        }
+        
+    </style>
+<script type="text/javascript">
+function myFunction() {
+  var a = document.getElementById("myText").value;
+  var g = document.getElementById("myCity").value;
+  var x = document.getElementById("myAnimal").value;
+  document.getElementById("demo").innerHTML = a + " is living in " + g + " because you can find " + x + "'s there."
+}
+</script>
+</head>
+<body>
+  <h3>Please clear and fill in the boxes with what they ask for.</h3>
+
+<input type="text" id="myText" value="full name?">
+<input type="text" id="myCity" value="dream city?">
+<input type="text" id="myAnimal" value="any animal?">
+
+
+<p>Push the button to see the sentance.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+</body>
+</html>

@@ -11,7 +11,7 @@
         }
         button{
           margin-bottom: 10px;
-          margin-left: 70px;
+          margin-left: 60px;
         }
         #demo, #demos, #madlib, #madlibs, #myholly{
           margin-bottom: 50px;
@@ -19,21 +19,21 @@
           border: .5px solid black;
           color: navy;
           font-family: 'ZCOOL QingKe HuangYou';
-          width: 500px;
-          margin-left: 70px;
+          width: 300px;
+          margin-left: 60px;
           padding: 17px;
           margin-top: 30px;
         }
         p{
-          padding-left: 70px;
+          padding-left: 60px;
          }
         h1{
             color: rgb(77, 71, 10);
             font-family: 'ZCOOL QingKe HuangYou';
-            padding-left:30px;
+            padding-left:15px;
         }
         h3, h4{
-            padding-left: 70px;
+            padding-left: 60px;
             color: rgb(77, 71, 10);
         }
         #crazy{
@@ -62,11 +62,11 @@
         } 
         #wrapper {
           display: grid;
-          grid-template-columns: 180px 180px;
+          grid-template-columns: 170px 170px;
           grid-gap: 10px;
           background-color: #fff;
           color: #444;
-          margin-left: 70px;
+          margin-left: 60px;
         }
       #box {
          background-color: #444;
@@ -114,20 +114,34 @@
 
   function myLib() {
     
-  var a = document.getElementById("a").value;
-  var b = document.getElementById("b").value;
-  var c = document.getElementById("c").value;
-  var d = document.getElementById("d").value;
-  var e = document.getElementById("e").value;
-  var f = document.getElementById("f").value;
-  var g = document.getElementById("g").value;
-  var h = document.getElementById("h").value;
-  var i = document.getElementById("i").value;
-  var j = document.getElementById("j").value;
-  var k = document.getElementById("k").value;
-  var l = document.getElementById("l").value;
-  var m = document.getElementById("m").value;
-  var n = document.getElementById("n").value;
+  var a = document.getElementById("name").value;
+  localStorage.setItem('name',a);
+  var b = document.getElementById("noun").value;
+  localStorage.setItem('noun',b);
+  var c = document.getElementById("color").value;
+  localStorage.setItem('color',c);
+  var d = document.getElementById("adjective").value;
+  localStorage.setItem('adjective',d);
+  var e = document.getElementById("number").value;
+  localStorage.setItem('number',e);
+  var f = document.getElementById("animal").value;
+  localStorage.setItem('animal',f);
+  var g = document.getElementById("sport").value;
+  localStorage.setItem('sport',g);
+  var h = document.getElementById("food").value;
+  localStorage.setItem('food',h);
+  var i = document.getElementById("numbers").value;
+  localStorage.setItem('numbers',i);
+  var j = document.getElementById("tran").value;
+  localStorage.setItem('tran',j);
+  var k = document.getElementById("city").value;
+  localStorage.setItem('city',k);
+  var l = document.getElementById("weather").value;
+  localStorage.setItem('weather',l);
+  var m = document.getElementById("time").value;
+  localStorage.setItem('time',m);
+  var n = document.getElementById("job").value;
+  localStorage.setItem('job',n);
   
 
 
@@ -144,26 +158,40 @@ function reSet() {
 }
 function myLibs() {
     
-    var a1 = document.getElementById("a1").value;
-    var b1 = document.getElementById("b1").value;
-    var c1 = document.getElementById("c1").value;
-    var d1 = document.getElementById("d1").value;
-    var e1 = document.getElementById("e1").value;
-    var f1 = document.getElementById("f1").value;
-    var g1 = document.getElementById("g1").value;
-    var h1 = document.getElementById("h1").value;
-    var i1 = document.getElementById("i1").value;
-    var j1 = document.getElementById("j1").value;
-    var k1 = document.getElementById("k1").value;
-    var l1 = document.getElementById("l1").value;
-    var m1 = document.getElementById("m1").value;
-    var n1 = document.getElementById("n1").value;
+    var a1 = document.getElementById("animals").value;
+    localStorage.setItem('animals',a1);
+    var b1 = document.getElementById("colors").value;
+    localStorage.setItem('colors',b1);
+    var c1 = document.getElementById("mood").value;
+    localStorage.setItem('mood',c1);
+    var d1 = document.getElementById("adjectives").value;
+    localStorage.setItem('adjectives',d1);
+    var e1 = document.getElementById("numbers1").value;
+    localStorage.setItem('numbers1',e1);
+    var f1 = document.getElementById("gender").value;
+    localStorage.setItem('gender',f1);
+    var g1 = document.getElementById("song").value;
+    localStorage.setItem('song',g1);
+    var h1 = document.getElementById("emotion").value;
+    localStorage.setItem('emotion',h1);
+    var i1 = document.getElementById("subject").value;
+    localStorage.setItem('subject',i1);
+    var j1 = document.getElementById("times").value;
+    localStorage.setItem('times',j1);
+    var k1 = document.getElementById("action").value;
+    localStorage.setItem('action',k1);
+    var l1 = document.getElementById("country").value;
+    localStorage.setItem('country',l1);
+    var m1 = document.getElementById("car").value;
+    localStorage.setItem('car',m1);
+    var n1 = document.getElementById("friend").value;
+    localStorage.setItem('friend',n1);
   
     
     document.getElementById("demos").innerHTML = "Yeserday for my birthday I got a " +a1+ " that could turn " +b1+".  That made me\
      very " +c1+ " and my head felt " +d1+ "!  I had finally turned "+e1+" and found out my "+a1+" was a "+f1+" because it had "+g1+".\
-     I was "+l1+" but had to do homework for my "+h1+" class, so I did it for "+i1+" and then went to "+j1+" with my "+a1+" and went all \
-     the way to "+k1+".  I was so tired I decided to take my "+a1+ " and I back in my "+m1+ " with "+n1+ ".  It was a long day but\
+     I was "+h1+" but had to do homework for my "+i1+" class, so I did it for "+j1+" and then went to "+l1+" with my "+a1+" and "+k1+
+     " all the way there.  I was so tired I decided to take my "+a1+ " and I back in my "+m1+ " with "+n1+ ".  It was a long day but\
      I really enjoyed my birthday."   
   }
   function reSets() {
@@ -171,27 +199,41 @@ function myLibs() {
   }
   function myMad() {
     
-    var a12 = document.getElementById("a12").value;
-    var b12 = document.getElementById("b12").value;
-    var c12 = document.getElementById("c12").value;
-    var d12 = document.getElementById("d12").value;
-    var e12 = document.getElementById("e12").value;
-    var f12 = document.getElementById("f12").value;
-    var g12 = document.getElementById("g12").value;
-    var h12 = document.getElementById("h12").value;
-    var i12 = document.getElementById("i12").value;
-    var j12 = document.getElementById("j12").value;
-    var k12 = document.getElementById("k12").value;
-    var l12 = document.getElementById("l12").value;
-    var m12 = document.getElementById("m12").value;
-    var n12 = document.getElementById("n12").value;
+    var a12 = document.getElementById("language").value;
+    localStorage.setItem('language',a12);
+    var b12 = document.getElementById("colors1").value;
+    localStorage.setItem('colors1',b12);
+    var c12 = document.getElementById("moods").value;
+    localStorage.setItem('moods',c12);
+    var d12 = document.getElementById("friends").value;
+    localStorage.setItem('friends',d12);
+    var e12 = document.getElementById("letter").value;
+    localStorage.setItem('letter',e12);
+    var f12 = document.getElementById("foods").value;
+    localStorage.setItem('foods',f12);
+    var g12 = document.getElementById("word").value;
+    localStorage.setItem('word',g12);
+    var h12 = document.getElementById("subjects").value;
+    localStorage.setItem('subjects',h12);
+    var i12 = document.getElementById("times1").value;
+    localStorage.setItem('times1',i12);
+    var j12 = document.getElementById("dessert").value;
+    localStorage.setItem('dessert',j12);
+    var k12 = document.getElementById("numbers").value;
+    localStorage.setItem('numbers',k12);
+    var l12 = document.getElementById("emotions").value;
+    localStorage.setItem('emotions',l12);
+    var m12 = document.getElementById("animals2").value;
+    localStorage.setItem('animals2',m12);
+    var n12 = document.getElementById("countrys").value;
+    localStorage.setItem('countrys',n12);
     
     
     document.getElementById("madlib").innerHTML = "For those of you who might not be able to understand this, that is because it is\
     written in "+a12+". Sometimes people see things in " +b12+ " which can make you feel "+c12+ " when ever you hang out with "+d12+" \
     who always seems to wear "+e12+".  Something that I really like about "+d12+ " is the fact that "+d12+" likes to have "+f12+ " with them \
-    or on them where ever they go.  The other day we went to get "+h12+ " and the people behind the counter told us "+i12+ " which they\
-    said was from learning about "+j12+".  I bet that took them "+k12+ " years to learn that, because they felt "+l12+". "+d12+" found a \
+    or on them where ever they go.  The other day we went to get "+j12+ " and the people behind the counter told us "+i12+ " which they\
+    said was from learning about "+h12+".  I bet that took them "+k12+ " years to learn that, because they felt "+l12+". "+d12+" found a \
     "+m12+" carcass behind the store and said maybe we are not in "+n12+" any more Toto.  We had a great laugh and "+d12+" and I decided it\
     was time to head home."   
   }
@@ -200,21 +242,36 @@ function myLibs() {
   }
   function myMads() {
     
-    var a123 = document.getElementById("a123").value;
-    var b123 = document.getElementById("b123").value;
-    var c123 = document.getElementById("c123").value;
-    var d123 = document.getElementById("d123").value;
-    var e123 = document.getElementById("e123").value;
-    var f123 = document.getElementById("f123").value;
-    var g123 = document.getElementById("g123").value;
-    var h123 = document.getElementById("h123").value;
-    var i123 = document.getElementById("i123").value;
-    var j123 = document.getElementById("j123").value;
-    var k123 = document.getElementById("k123").value;
-    var l123 = document.getElementById("l123").value;
-    var m123 = document.getElementById("m123").value;
-    var n123 = document.getElementById("n123").value;
-    var o123 = document.getElementById("o123").value;
+    var a123 = document.getElementById("child").value;
+    localStorage.setItem('child',a123);
+    var b123 = document.getElementById("age").value;
+    localStorage.setItem('age',b123);
+    var c123 = document.getElementById("toy").value;
+    localStorage.setItem('toy',c123);
+    var d123 = document.getElementById("names").value;
+    localStorage.setItem('names',d123);
+    var e123 = document.getElementById("number1").value;
+    localStorage.setItem('number1',e123);
+    var f123 = document.getElementById("foods1").value;
+    localStorage.setItem('foods1',f123);
+    var g123 = document.getElementById("colors2").value;
+    localStorage.setItem('colors2',g123);
+    var h123 = document.getElementById("animals3").value;
+    localStorage.setItem('animals3',h123);
+    var i123 = document.getElementById("emotions1").value;
+    localStorage.setItem('emotions1',i123);
+    var j123 = document.getElementById("insect").value;
+    localStorage.setItem('insect',j123);
+    var k123 = document.getElementById("state").value;
+    localStorage.setItem('state',k123);
+    var l123 = document.getElementById("timeofday").value;
+    localStorage.setItem('timeofday',l123);
+    var m123 = document.getElementById("expression").value;
+    localStorage.setItem('expression',m123);
+    var n123 = document.getElementById("parent").value;
+    localStorage.setItem('parent',n123);
+    var o123 = document.getElementById("genders").value;
+    localStorage.setItem('genders',o123);
   
     
     document.getElementById("madlibs").innerHTML = "One day on my way home from work I saw a "+a123+".  I looked around to see if any\
@@ -231,20 +288,34 @@ function myLibs() {
   }
   function myHolly() {
     
-    var a1234 = document.getElementById("a1234").value;
-    var b12b = document.getElementById("b12b").value;
-    var c12c = document.getElementById("c12c").value;
-    var d12d = document.getElementById("d12d").value;
-    var e12e = document.getElementById("e12e").value;
-    var f12f = document.getElementById("f12f").value;
-    var g12g = document.getElementById("g12g").value;
-    var h12h = document.getElementById("h12h").value;
-    var i12i = document.getElementById("i12i").value;
-    var j12j = document.getElementById("j12j").value;
-    var k12k = document.getElementById("k12k").value;
-    var l12l = document.getElementById("l12l").value;
-    var m12m = document.getElementById("m12m").value;
-    var n12n = document.getElementById("n12n").value;
+    var a1234 = document.getElementById("thing").value;
+    localStorage.setItem('thing',a1234);
+    var b12b = document.getElementById("destroy").value;
+    localStorage.setItem('destroy',b12b);
+    var c12c = document.getElementById("emotions2").value;
+    localStorage.setItem('emotions2',c12c);
+    var d12d = document.getElementById("object").value;
+    localStorage.setItem('object',d12d);
+    var e12e = document.getElementById("relative").value;
+    localStorage.setItem('relative',e12e);
+    var f12f = document.getElementById("room").value;
+    localStorage.setItem('room',f12f);
+    var g12g = document.getElementById("adjectives1").value;
+    localStorage.setItem('adjectives1',g12g);
+    var h12h = document.getElementById("times2").value;
+    localStorage.setItem('times2',h12h);
+    var i12i = document.getElementById("foods2").value;
+    localStorage.setItem('foods2',i12i);
+    var j12j = document.getElementById("drink").value;
+    localStorage.setItem('drink',j12j);
+    var k12k = document.getElementById("moods1").value;
+    localStorage.setItem('moods1',k12k);
+    var l12l = document.getElementById("objects").value;
+    localStorage.setItem('objects',l12l);
+    var m12m = document.getElementById("phrase").value;
+    localStorage.setItem('phrase',m12m);
+    var n12n = document.getElementById("rooms").value;
+    localStorage.setItem('rooms',n12n);
   
     
     document.getElementById("myholly").innerHTML = "The other day I ran into a table with a "+a1234+" that fell over and "+b12b+".  I was\
@@ -263,27 +334,27 @@ function myLibs() {
 </script>
 </head>
 <body>
-  <h1><img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142">CrazyLib's<img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142"></h1>
+   <h1>CrazyLib's<img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142"></h1>
   <h3>Please fill in the boxes below as directed.</h3>
   
   <h4>#1 Lib<img id="lib" src="huh.jfif" alt="Smiley face" height="100" width="100"></h4>
   <form id="myLib">
 
   <div id="wrapper">  
-  <div id="box a">Person's Name: <input type="text" id="a" value=""></div>
-  <div id="box b">Noun: <input type="text" id="b" value=""></div>
-  <div id="box c">Color: <input type="text" id="c" value=""></div>
-  <div id="box d">Adjective: <input type="text" id="d" value=""></div>
-  <div id="box e">Number: <input type="text" id="e" value=""></div>
-  <div id="box f">Animal: <input type="text" id="f" value=""></div>
-  <div id="box g">Sport: <input type="text" id="g" value=""></div>
-  <div id="box h">Food: <input type="text" id="h" value=""></div>
-  <div id="box i">Number: <input type="text" id="i" value=""></div>
-  <div id="box j">Transportation: <input type="text" id="j" value=""></div>
-  <div id="box k">City: <input type="text" id="k" value=""></div>
-  <div id="box l">Weather Type: <input type="text" id="l" value=""></div>
-  <div id="box m">Amount of Time: <input type="text" id="m" value=""></div> 
-  <div id="box n">Occupation: <input type="text" id="n" value=""></div>
+  <div id="box a">Person's Name: <input type="text" id="name" value="" required></div>
+  <div id="box b">Noun: <input type="text" id="noun" value=""></div>
+  <div id="box c">Color: <input type="text" id="color" value=""></div>
+  <div id="box d">Adjective: <input type="text" id="adjective" value=""></div>
+  <div id="box e">Number: <input type="text" id="number" value=""></div>
+  <div id="box f">Animal: <input type="text" id="animal" value=""></div>
+  <div id="box g">Sport: <input type="text" id="sport" value=""></div>
+  <div id="box h">Food: <input type="text" id="food" value=""></div>
+  <div id="box i">Number: <input type="text" id="numbers" value=""></div>
+  <div id="box j">Transportation: <input type="text" id="tran" value=""></div>
+  <div id="box k">City: <input type="text" id="city" value=""></div>
+  <div id="box l">Weather Type: <input type="text" id="weather" value=""></div>
+  <div id="box m">Amount of Time: <input type="text" id="time" value=""></div> 
+  <div id="box n">Occupation: <input type="text" id="job" value=""></div>
   </div>
   </form>
   <br><br>
@@ -294,20 +365,20 @@ function myLibs() {
   <h4><img id="lib" src="funny.jfif" alt="Smiley face" height="100" width="100">#2 Lib</h4>
   <form id="myLibs">
   <div id="wrapper">  
-  <div id="box a">Animal: <input type="text" id="a1" value=""></div>
-  <div id="box b">Color: <input type="text" id="b1" value=""></div>
-  <div id="box c">Mood: <input type="text" id="c1" value=""></div>
-  <div id="box d">Adjective: <input type="text" id="d1" value=""></div>
-  <div id="box e">Number: <input type="text" id="e1" value=""></div>
-  <div id="box f">Male or Female: <input type="text" id="f1" value=""></div>
-  <div id="box g">Song: <input type="text" id="g1" value=""></div>
-  <div id="box h">Emotion: <input type="text" id="h1" value=""></div>
-  <div id="box i">School Subject: <input type="text" id="i1" value=""></div>
-  <div id="box j">Amount of Time: <input type="text" id="j1" value=""></div>
-  <div id="box k">Swim/Walk/or Run: <input type="text" id="k1" value=""></div>
-  <div id="box l">Country: <input type="text" id="l1" value=""></div>
-  <div id="box m">Car: <input type="text" id="m1" value=""></div>
-  <div id="box n">Friends Name: <input type="text" id="n1" value=""></div>
+  <div id="box a">Animal: <input type="text" id="animals" value=""></div>
+  <div id="box b">Color: <input type="text" id="colors" value=""></div>
+  <div id="box c">Mood: <input type="text" id="mood" value=""></div>
+  <div id="box d">Adjective: <input type="text" id="adjectives" value=""></div>
+  <div id="box e">Number: <input type="text" id="numbers1" value=""></div>
+  <div id="box f">Male or Female: <input type="text" id="gender" value=""></div>
+  <div id="box g">Song: <input type="text" id="song" value=""></div>
+  <div id="box h">Emotion: <input type="text" id="emotion" value=""></div>
+  <div id="box i">School Subject: <input type="text" id="subject" value=""></div>
+  <div id="box j">Amount of Time: <input type="text" id="times" value=""></div>
+  <div id="box k">Swim/Walk/or Run: <input type="text" id="action" value=""></div>
+  <div id="box l">Country: <input type="text" id="country" value=""></div>
+  <div id="box m">Car: <input type="text" id="car" value=""></div>
+  <div id="box n">Friends Name: <input type="text" id="friend" value=""></div>
   </div>
   </form>
   <br><br>
@@ -318,20 +389,20 @@ function myLibs() {
   <h4>#3 Lib<img id="lib" src="hum.jfif" alt="Smiley face" height="100" width="100"></h4>
   <form id="mymad">
   <div id="wrapper">  
-  <div id="box a">Language: <input type="text" id="a12" value=""></div>
-  <div id="box b">Color: <input type="text" id="b12" value=""></div>
-  <div id="box c">Mood: <input type="text" id="c12" value=""></div> 
-  <div id="box d">Friends Name:<input type="text" id="d12" value=""></div>
-  <div id="box e">Letter: <input type="text" id="e12" value=""></div> 
-  <div id="box f">Favorite Food: <input type="text" id="f12" value=""></div>
-  <div id="box g">Word: <input type="text" id="g12" value=""></div> 
-  <div id="box h">School Subject: <input type="text" id="h12" value=""></div>
-  <div id="box i">Amount of Time: <input type="text" id="i12" value=""></div> 
-  <div id="box j">Dessert: <input type="text" id="j12" value=""></div>
-  <div id="box k">Number: <input type="text" id="k12" value=""></div> 
-  <div id="box l">Emotion: <input type="text" id="l12" value=""></div>
-  <div id="box m">Animal: <input type="text" id="m12" value=""></div> 
-  <div id="box n">Country: <input type="text" id="n12" value=""></div>
+  <div id="box a">Language: <input type="text" id="language" value=""></div>
+  <div id="box b">Color: <input type="text" id="colors1" value=""></div>
+  <div id="box c">Mood: <input type="text" id="moods" value=""></div> 
+  <div id="box d">Friends Name:<input type="text" id="friends" value=""></div>
+  <div id="box e">Letter: <input type="text" id="letter" value=""></div> 
+  <div id="box f">Favorite Food: <input type="text" id="foods" value=""></div>
+  <div id="box g">Word: <input type="text" id="word" value=""></div> 
+  <div id="box h">School Subject: <input type="text" id="subjects" value=""></div>
+  <div id="box i">Amount of Time: <input type="text" id="times1" value=""></div> 
+  <div id="box j">Dessert: <input type="text" id="dessert" value=""></div>
+  <div id="box k">Number: <input type="text" id="numbers" value=""></div> 
+  <div id="box l">Emotion: <input type="text" id="emotions" value=""></div>
+  <div id="box m">Animal: <input type="text" id="animals2" value=""></div> 
+  <div id="box n">Country: <input type="text" id="countrys" value=""></div>
   </div>
   </form>
   <br><br>
@@ -342,21 +413,21 @@ function myLibs() {
   <h4><img id="lib" src="goodjob.jfif" alt="Smiley face" height="100" width="100">#4 Lib</h4>
   <form id="mymads">
   <div id="wrapper"> 
-     <div id="box a">Boy or Girl: <input type="text" id="a123" value=""></div>
-     <div id="box b">Age: <input type="text" id="b123" value=""></div>
-     <div id="box c">Favorite Toy: <input type="text" id="c123" value=""></div>
-     <div id="box d">Proper name: <input type="text" id="d123" value=""></div>  
-     <div id="box e">Number: <input type="text" id="e123" value=""></div>
-     <div id="box f">Favorite Food: <input type="text" id="f123" value=""></div>
-     <div id="box g">Color: <input type="text" id="g123" value=""></div>
-     <div id="box h">Favorite Animal: <input type="text" id="h123" value=""></div>
-     <div id="box i">Emotion: <input type="text" id="i123" value=""></div>
-     <div id="box j">Insect: <input type="text" id="j123" value=""></div>
-     <div id="box k">State: <input type="text" id="k123" value=""></div>
-     <div id="box l">Morning/Noon/or Evening: <input type="text" id="l123" value=""></div>
-     <div id="box m">Facial Expression: <input type="text" id="m123" value=""></div>
-     <div id="box n">Mom or Dad: <input type="text" id="n123" value=""></div>
-     <div id="box o">She or He: <input type="text" id="o123" value=""></div>
+     <div id="box a">Boy or Girl: <input type="text" id="child" value=""></div>
+     <div id="box b">Age: <input type="text" id="age" value=""></div>
+     <div id="box c">Favorite Toy: <input type="text" id="toy" value=""></div>
+     <div id="box d">Proper name: <input type="text" id="names" value=""></div>  
+     <div id="box e">Number: <input type="text" id="number1" value=""></div>
+     <div id="box f">Favorite Food: <input type="text" id="foods1" value=""></div>
+     <div id="box g">Color: <input type="text" id="colors2" value=""></div>
+     <div id="box h">Favorite Animal: <input type="text" id="animals3" value=""></div>
+     <div id="box i">Emotion: <input type="text" id="emotions1" value=""></div>
+     <div id="box j">Insect: <input type="text" id="insect" value=""></div>
+     <div id="box k">State: <input type="text" id="state" value=""></div>
+     <div id="box l">Morning/Noon/or Evening: <input type="text" id="timeofday" value=""></div>
+     <div id="box m">Facial Expression: <input type="text" id="expression" value=""></div>
+     <div id="box n">Mom or Dad: <input type="text" id="parent" value=""></div>
+     <div id="box o">She or He: <input type="text" id="genders" value=""></div>
   </div> 
   </form>
   <br><br>
@@ -367,27 +438,27 @@ function myLibs() {
   <h4>#5 Lib<img id="lib" src="hilarious.jfif" alt="Smiley face" height="100" width="100"></h4>
   <form id="hOlly">
   <div id="wrapper"> 
-  <div id="box o">Thing: <input type="text" id="a1234" value=""></div>
-  <div id="box o">Exploded/Smashed/Broke: <input type="text" id="b12b" value=""></div>
-  <div id="box o">Emotion: <input type="text" id="c12c" value=""></div>
-  <div id="box o">Object: <input type="text" id="d12d" value=""></div>
-  <div id="box o">Relative: <input type="text" id="e12e" value=""></div>
-  <div id="box o">Room in house: <input type="text" id="f12f" value=""></div>
-  <div id="box o">Adjective: <input type="text" id="g12g" value=""></div>
-  <div id="box o">Morning/Noon or Evening: <input type="text" id="h12h" value=""></div>
-  <div id="box o">Food: <input type="text" id="i12i" value=""></div>
-  <div id="box o">drink: <input type="text" id="j12j" value=""></div>
-  <div id="box o">Mood: <input type="text" id="k12k" value=""></div> 
-  <div id="box o">Object: <input type="text" id="l12l" value=""></div> 
-  <div id="box o">Phrase: <input type="text" id="m12m" value=""></div>
-  <div id="box o">Room in house: <input type="text" id="n12n" value=""></div>
+  <div id="box o">Thing: <input type="text" id="thing" value=""></div>
+  <div id="box o">Exploded/Smashed/Broke: <input type="text" id="destroy" value=""></div>
+  <div id="box o">Emotion: <input type="text" id="emotions2" value=""></div>
+  <div id="box o">Object: <input type="text" id="object" value=""></div>
+  <div id="box o">Relative: <input type="text" id="relative" value=""></div>
+  <div id="box o">Room in house: <input type="text" id="room" value=""></div>
+  <div id="box o">Adjective: <input type="text" id="adjectives1" value=""></div>
+  <div id="box o">Morning/Noon or Evening: <input type="text" id="times2" value=""></div>
+  <div id="box o">Food: <input type="text" id="foods2" value=""></div>
+  <div id="box o">drink: <input type="text" id="drink" value=""></div>
+  <div id="box o">Mood: <input type="text" id="moods1" value=""></div> 
+  <div id="box o">Object: <input type="text" id="objects" value=""></div> 
+  <div id="box o">Phrase: <input type="text" id="phrase" value=""></div>
+  <div id="box o">Room in house: <input type="text" id="rooms" value=""></div>
   </div>
   </form>
   <br><br>
   <button onclick="myHolly()">Crazy lib</button> 
   <button onclick="hOlly()">Reset Form</button>
   <div id="myholly"></div>
-  <h1><img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142">FUNNY<img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142"></h1>
+  <h1><img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142">FUNNY!!</h1>
   
 </body>
 </html>

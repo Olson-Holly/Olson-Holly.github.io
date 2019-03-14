@@ -11,18 +11,18 @@
         }
         button{
           margin-bottom: 10px;
-          margin-left: 85px;
+          margin-left: 70px;
         }
-        div{
+        #demo, #demos, #madlib, #madlibs, #myholly{
           margin-bottom: 50px;
-          background: lawngreen;
-          border: 3px solid purple;
+          background: rgb(244, 247, 231);
+          border: .5px solid black;
           color: navy;
           font-family: 'ZCOOL QingKe HuangYou';
-          width: 770px;
+          width: 500px;
           margin-left: 70px;
           padding: 17px;
-          font-size: 30px;
+          margin-top: 30px;
         }
         p{
           padding-left: 70px;
@@ -60,6 +60,21 @@
             height: 160px;
             transform: rotate(-1440deg);
         } 
+        #wrapper {
+          display: grid;
+          grid-template-columns: 180px 180px;
+          grid-gap: 10px;
+          background-color: #fff;
+          color: #444;
+          margin-left: 70px;
+        }
+      #box {
+         background-color: #444;
+         color: #fff;
+         border-radius: 5px;
+         padding: 20px;
+         font-size: 150%;
+        }
         @media only screen and (device-width: 768px){
           button{
           margin-bottom: 10px;
@@ -250,70 +265,129 @@ function myLibs() {
 <body>
   <h1><img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142">CrazyLib's<img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142"></h1>
   <h3>Please fill in the boxes below as directed.</h3>
-  <h4>Have fun and make the smiley faces spin by hovering over or clicking on them.</h4>
-  <h4>Push the tab button to get from one item on the form to the next.</h4>
+  
   <h4>#1 Lib<img id="lib" src="huh.jfif" alt="Smiley face" height="100" width="100"></h4>
   <form id="myLib">
-  <p>Proper Name: <input type="text" id="a" value="">  Noun: <input type="text" id="b" value=""></p>
-  <p>Color: <input type="text" id="c" value=""> Adjictive: <input type="text" id="d" value=""></p>
-  <p>Number: <input type="text" id="e" value=""> Animal: <input type="text" id="f" value=""></p>
-  <p>Sport: <input type="text" id="g" value="">  Food: <input type="text" id="h" value=""></p>
-  <p>Number: <input type="text" id="i" value=""> Transportation: <input type="text" id="j" value=""></p>
-  <p> Name of City: <input type="text" id="k" value=""> Weather: <input type="text" id="l" value=""></p>
-  <p>Amount of Time: <input type="text" id="m" value=""> Job: <input type="text" id="n" value=""></p></form>
+
+  <div id="wrapper">  
+  <div id="box a">Person's Name: <input type="text" id="a" value=""></div>
+  <div id="box b">Noun: <input type="text" id="b" value=""></div>
+  <div id="box c">Color: <input type="text" id="c" value=""></div>
+  <div id="box d">Adjective: <input type="text" id="d" value=""></div>
+  <div id="box e">Number: <input type="text" id="e" value=""></div>
+  <div id="box f">Animal: <input type="text" id="f" value=""></div>
+  <div id="box g">Sport: <input type="text" id="g" value=""></div>
+  <div id="box h">Food: <input type="text" id="h" value=""></div>
+  <div id="box i">Number: <input type="text" id="i" value=""></div>
+  <div id="box j">Transportation: <input type="text" id="j" value=""></div>
+  <div id="box k">City: <input type="text" id="k" value=""></div>
+  <div id="box l">Weather Type: <input type="text" id="l" value=""></div>
+  <div id="box m">Amount of Time: <input type="text" id="m" value=""></div> 
+  <div id="box n">Occupation: <input type="text" id="n" value=""></div>
+  </div>
+  </form>
+  <br><br>
   <button onclick="myLib()">Crazy lib</button> 
   <button onclick="reSet()">Reset Form</button>
   <div id="demo"></div>
+
   <h4><img id="lib" src="funny.jfif" alt="Smiley face" height="100" width="100">#2 Lib</h4>
   <form id="myLibs">
-  <p>Animal: <input type="text" id="a1" value="">  Color: <input type="text" id="b1" value=""></p>
-  <p>Mood: <input type="text" id="c1" value=""> Adjictive: <input type="text" id="d1" value=""></p>
-  <p>Number: <input type="text" id="e1" value=""> Male or Female: <input type="text" id="f1" value=""></p>
-  <p>Song: <input type="text" id="g1" value=""> Emotion: <input type="text" id="l1" value=""></p>
-  <p>School Subject: <input type="text" id="h1" value=""> Amount of Time: <input type="text" id="i1" value=""></p>
-  <p>Swim/Walk/or Run: <input type="text" id="j1" value=""> Country: <input type="text" id="k1" value=""></p>
-  <p>Car: <input type="text" id="m1" value=""> Friends Name: <input type="text" id="n1" value=""></p></form>
+  <div id="wrapper">  
+  <div id="box a">Animal: <input type="text" id="a1" value=""></div>
+  <div id="box b">Color: <input type="text" id="b1" value=""></div>
+  <div id="box c">Mood: <input type="text" id="c1" value=""></div>
+  <div id="box d">Adjective: <input type="text" id="d1" value=""></div>
+  <div id="box e">Number: <input type="text" id="e1" value=""></div>
+  <div id="box f">Male or Female: <input type="text" id="f1" value=""></div>
+  <div id="box g">Song: <input type="text" id="g1" value=""></div>
+  <div id="box h">Emotion: <input type="text" id="h1" value=""></div>
+  <div id="box i">School Subject: <input type="text" id="i1" value=""></div>
+  <div id="box j">Amount of Time: <input type="text" id="j1" value=""></div>
+  <div id="box k">Swim/Walk/or Run: <input type="text" id="k1" value=""></div>
+  <div id="box l">Country: <input type="text" id="l1" value=""></div>
+  <div id="box m">Car: <input type="text" id="m1" value=""></div>
+  <div id="box n">Friends Name: <input type="text" id="n1" value=""></div>
+  </div>
+  </form>
+  <br><br>
   <button onclick="myLibs()">Crazy lib</button> 
   <button onclick="reSets()">Reset Form</button>
   <div id="demos"></div>
+
   <h4>#3 Lib<img id="lib" src="hum.jfif" alt="Smiley face" height="100" width="100"></h4>
   <form id="mymad">
-  <p>Language: <input type="text" id="a12" value="">  Color: <input type="text" id="b12" value=""></p>
-  <p>Mood: <input type="text" id="c12" value=""> Friends Name:<input type="text" id="d12" value=""></p>
-  <p>Letter: <input type="text" id="e12" value=""> Favorite Food: <input type="text" id="f12" value=""></p>
-  <p>Word: <input type="text" id="g12" value=""> School Subject: <input type="text" id="h12" value=""></p>
-  <p>Amount of Time: <input type="text" id="i12" value=""> Dessert: <input type="text" id="j12" value=""></p>
-  <p>Number: <input type="text" id="k12" value=""> Emotion: <input type="text" id="l12" value=""></p>
-  <p>Animal: <input type="text" id="m12" value=""> Country: <input type="text" id="n12" value=""></p></form>
+  <div id="wrapper">  
+  <div id="box a">Language: <input type="text" id="a12" value=""></div>
+  <div id="box b">Color: <input type="text" id="b12" value=""></div>
+  <div id="box c">Mood: <input type="text" id="c12" value=""></div> 
+  <div id="box d">Friends Name:<input type="text" id="d12" value=""></div>
+  <div id="box e">Letter: <input type="text" id="e12" value=""></div> 
+  <div id="box f">Favorite Food: <input type="text" id="f12" value=""></div>
+  <div id="box g">Word: <input type="text" id="g12" value=""></div> 
+  <div id="box h">School Subject: <input type="text" id="h12" value=""></div>
+  <div id="box i">Amount of Time: <input type="text" id="i12" value=""></div> 
+  <div id="box j">Dessert: <input type="text" id="j12" value=""></div>
+  <div id="box k">Number: <input type="text" id="k12" value=""></div> 
+  <div id="box l">Emotion: <input type="text" id="l12" value=""></div>
+  <div id="box m">Animal: <input type="text" id="m12" value=""></div> 
+  <div id="box n">Country: <input type="text" id="n12" value=""></div>
+  </div>
+  </form>
+  <br><br>
   <button onclick="myMad()">Crazy lib</button> 
   <button onclick="reseT()">Reset Form</button>
   <div id="madlib"></div>
+
   <h4><img id="lib" src="goodjob.jfif" alt="Smiley face" height="100" width="100">#4 Lib</h4>
   <form id="mymads">
-  <p>Boy or Girl: <input type="text" id="a123" value="">  Age: <input type="text" id="b123" value=""></p>
-  <p>Favorite Toy: <input type="text" id="c123" value=""> Proper name: <input type="text" id="d123" value=""></p>  
-  <p>Number: <input type="text" id="e123" value=""> Favorite Food: <input type="text" id="f123" value=""></p>
-  <p>Color: <input type="text" id="g123" value=""> Favorite Animal: <input type="text" id="h123" value=""></p>
-  <p>Emotion: <input type="text" id="i123" value=""> Insect: <input type="text" id="j123" value=""></p>
-  <p>State: <input type="text" id="k123" value="">  Morning/Noon/or Evening: <input type="text" id="l123" value=""></p>
-  <p>Facial Expression: <input type="text" id="m123" value=""> Mom or Dad: <input type="text" id="n123" value=""> </p>
-  <p>She or He: <input type="text" id="o123" value=""></p></form>
+  <div id="wrapper"> 
+     <div id="box a">Boy or Girl: <input type="text" id="a123" value=""></div>
+     <div id="box b">Age: <input type="text" id="b123" value=""></div>
+     <div id="box c">Favorite Toy: <input type="text" id="c123" value=""></div>
+     <div id="box d">Proper name: <input type="text" id="d123" value=""></div>  
+     <div id="box e">Number: <input type="text" id="e123" value=""></div>
+     <div id="box f">Favorite Food: <input type="text" id="f123" value=""></div>
+     <div id="box g">Color: <input type="text" id="g123" value=""></div>
+     <div id="box h">Favorite Animal: <input type="text" id="h123" value=""></div>
+     <div id="box i">Emotion: <input type="text" id="i123" value=""></div>
+     <div id="box j">Insect: <input type="text" id="j123" value=""></div>
+     <div id="box k">State: <input type="text" id="k123" value=""></div>
+     <div id="box l">Morning/Noon/or Evening: <input type="text" id="l123" value=""></div>
+     <div id="box m">Facial Expression: <input type="text" id="m123" value=""></div>
+     <div id="box n">Mom or Dad: <input type="text" id="n123" value=""></div>
+     <div id="box o">She or He: <input type="text" id="o123" value=""></div>
+  </div> 
+  </form>
+  <br><br>
   <button onclick="myMads()">Crazy lib</button> 
   <button onclick="reseTs()">Reset Form</button>
   <div id="madlibs"></div>
+
   <h4>#5 Lib<img id="lib" src="hilarious.jfif" alt="Smiley face" height="100" width="100"></h4>
   <form id="hOlly">
-  <p>Thing: <input type="text" id="a1234" value="">  Exploded/Smashed or Broke: <input type="text" id="b12b" value=""></p>
-  <p> Emotion: <input type="text" id="c12c" value=""> Object: <input type="text" id="d12d" value=""></p>
-  <p> Relative: <input type="text" id="e12e" value=""> Room: <input type="text" id="f12f" value=""></p>
-  <p>Adjictive: <input type="text" id="g12g" value=""> Morning/Noon or Evening: <input type="text" id="h12h" value=""></p>
-  <p>Food: <input type="text" id="i12i" value=""> drink: <input type="text" id="j12j" value=""></p>
-  <p>Mood: <input type="text" id="k12k" value="">  Object: <input type="text" id="l12l" value=""></p> 
-  <p>Phrase: <input type="text" id="m12m" value=""> Room in house: <input type="text" id="n12n" value=""></p></form>
-    <button onclick="myHolly()">Crazy lib</button> 
-    <button onclick="hOlly()">Reset Form</button>
-    <div id="myholly"></div>
-    <h1><img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142">FUNNY<img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142"></h1>
+  <div id="wrapper"> 
+  <div id="box o">Thing: <input type="text" id="a1234" value=""></div>
+  <div id="box o">Exploded/Smashed/Broke: <input type="text" id="b12b" value=""></div>
+  <div id="box o">Emotion: <input type="text" id="c12c" value=""></div>
+  <div id="box o">Object: <input type="text" id="d12d" value=""></div>
+  <div id="box o">Relative: <input type="text" id="e12e" value=""></div>
+  <div id="box o">Room in house: <input type="text" id="f12f" value=""></div>
+  <div id="box o">Adjective: <input type="text" id="g12g" value=""></div>
+  <div id="box o">Morning/Noon or Evening: <input type="text" id="h12h" value=""></div>
+  <div id="box o">Food: <input type="text" id="i12i" value=""></div>
+  <div id="box o">drink: <input type="text" id="j12j" value=""></div>
+  <div id="box o">Mood: <input type="text" id="k12k" value=""></div> 
+  <div id="box o">Object: <input type="text" id="l12l" value=""></div> 
+  <div id="box o">Phrase: <input type="text" id="m12m" value=""></div>
+  <div id="box o">Room in house: <input type="text" id="n12n" value=""></div>
+  </div>
+  </form>
+  <br><br>
+  <button onclick="myHolly()">Crazy lib</button> 
+  <button onclick="hOlly()">Reset Form</button>
+  <div id="myholly"></div>
+  <h1><img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142">FUNNY<img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142"></h1>
   
 </body>
 </html>

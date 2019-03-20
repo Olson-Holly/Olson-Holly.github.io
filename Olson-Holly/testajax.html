@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+        body{
+            margin-left: 50px;
+        }
+        button{
+          margin-bottom: 10px;
+        }
+        div{
+          margin-bottom: 50px;
+          background: lightyellow;
+          border: 1px solid black;
+          width: 150px;
+          padding: 15px;
+        }
+        p{
+          width: 350px;
+        }
+    </style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+    <p id= 'quote'></p>
+    <script type="text/javascript">
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function(){
+         if(this.readyState == 4 && this.status == 200) {
+           var response = JSON.parse(xhttp.responseText);
+           var animal = response.thought;
+      
+           var output = "";
+           for(var i=0; i<thought.length;i++) {
+             output += "<li>" + thought[i].quote + "</li>";
+           }
+           document.getElementById('quote').innerHTML = output;
+         }
+       };
+       xhttp.open("GET", "quotes.json", true);
+       xhttp.send();
+</body>
+</html>

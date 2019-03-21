@@ -48,11 +48,11 @@
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     var response = JSON.parse(xhttp.responseText);
-                    var quotes = response.quotes;
+                    var people = response.people;
 
                     var output = '';
                     //for loop
-                    for (var i = 0; i < quotes.length;i++) {
+                    for (var i = 0; i < people.length;i++) {
                         
                         
                         
@@ -61,12 +61,12 @@
                         */
                        
                        
-                        output += '<li>' + quotes[i].quote + '</li>';
+                        output += '<li>' + people[i].name + '</li>';
                     }
                     document.getElementById('people').innerHTML = output;
                 }
             };
-            xhttp.open("GET", "quotes.json", true);
+            xhttp.open("GET", "peoplekeith.json", true);
             xhttp.send();
 
 

@@ -335,16 +335,11 @@ function myLibs() {
         if (ajaxhttp.readyState == 4 && ajaxhttp.status == 200){
 	    var jcontent =JSON.parse(ajaxhttp.responseText);
         output.innerHTML = jcontent;
-	    // console.log(jcontent);
+	    console.log(jcontent);
     }
 
-        }
-        
-     
-//     xhttp.open("GET", "quotes.json", true);
-//     xhttp.send();
-//   }
-  </script>
+        }        
+ </script>
 </head>
 <body>
    <h1>CrazyLib's<img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142"></h1>

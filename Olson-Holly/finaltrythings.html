@@ -13,7 +13,7 @@
           margin-bottom: 10px;
           margin-left: 60px;
         }
-        #demo, #demos, #madlib, #madlibs, #myholly{
+        #demo, #demos, #madlib, #madlibs, #myholly, #output{
           margin-bottom: 50px;
           background: rgb(244, 247, 231);
           border: .5px solid black;
@@ -328,21 +328,22 @@ function myLibs() {
     document.getElementById("hOlly").reset();
   }
   function aJax() {
+    var output = document.getElementById('output');  
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function (){
-      if(this.readyState == 4 && this.status == 200) {
-        var response = JSON.parse(xhttp.resonseText);
-        var quotes = response.thought;
-        var output = "";
-        for(var i=0; i<thought.length;i++) {
-          output += "<li>" + thought[i].quote + "<li>";
+    var url = "https://api.myjson.com/bins/swafm";
+    ajaxhttp.open("GET", url, true);
+        if (ajaxhttp.readyState == 4 && ajaxhttp.status == 200){
+	    var jcontent =JSON.parse(ajaxhttp.responseText);
+        output.innerHTML = jcontent;
+	    // console.log(jcontent);
+    }
+
         }
-        document.getElementById('thought').innerHTML = output;
-      }
-    };
-    xhttp.open("GET", "quotes.json", true);
-    xhttp.send();
-  }
+        
+     
+//     xhttp.open("GET", "quotes.json", true);
+//     xhttp.send();
+//   }
   </script>
 </head>
 <body>
@@ -471,8 +472,8 @@ function myLibs() {
   <button onclick="hOlly()">Reset Form</button>
   <div id="myholly"></div>
   <h1><img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142">FUNNY!!</h1>
-  <p>Push the button to read some funny sayings I pulled from my AJAX file.</p>
+  <p>Push the button to read some funny sayings I pulled from a JSON file.</p>
   <button onclick="aJax()">funny sayings</button>
-  <div id="thought"></div>
+  <div id="output"></div>
 </body>
 </html>

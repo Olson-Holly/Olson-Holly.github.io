@@ -33,7 +33,8 @@
           if (this.status === 200) 
               {
                   //return server response as an object with JSON.parse
-                  console.log(JSON.parse(this.responseText));
+                  var output = JSON.parse(this.responseText);
+                  document.getElementById('ajax').innerHTML = output;
       }
               }
   //call send
@@ -45,6 +46,6 @@
 </script>
 </head>
 <body>
-  
+  <p id="ajax"></p>
 </body>
 </html>

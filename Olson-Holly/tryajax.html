@@ -22,37 +22,37 @@
         } */
     </style>
 <script type="text/javascript">
-  var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function(){
-       if(this.readyState == 4 && this.status == 200) {
-         var response = JSON.parse(xhttp.responseText);
-         var animal = response.thought;    
-         var output = "";
-         for(var i=0; i<thought.length;i++) {
-           output += "<li>" + thought[i].quote + "</li>";
-         }
-         document.getElementById('animal').innerHTML = output;
-       }
-     };
-     xhttp.open("GET", "https://api.myjson.com/bins/swafm", true);
-     xhttp.send();
-   //Create the XHR Object
-   let xhr = new XMLHttpRequest;
-  //Call the open function, GET-type of request, url, true-asynchronous
-  xhr.open('GET', 'https://api.myjson.com/bins/swafm', true)
-  //call the onload 
-  xhr.onload = function() 
-      {
-          //check if the status is 200(means everything is okay)
-          if (this.status === 200) 
-              {
-                  //return server response as an object with JSON.parse
-                  var output = JSON.parse(this.responseText);
-                  document.getElementById('ajax').innerHTML = output;
-      }
-              }
+//   var xhttp = new XMLHttpRequest();
+//       xhttp.onreadystatechange = function(){
+//        if(this.readyState == 4 && this.status == 200) {
+//          var response = JSON.parse(xhttp.responseText);
+//          var animal = response.thought;    
+//          var output = "";
+//          for(var i=0; i<thought.length;i++) {
+//            output += "<li>" + thought[i].quote + "</li>";
+//          }
+//          document.getElementById('animal').innerHTML = output;
+//        }
+//      };
+//      xhttp.open("GET", "https://api.myjson.com/bins/swafm", true);
+//      xhttp.send();
+//    //Create the XHR Object
+//    let xhr = new XMLHttpRequest;
+//   //Call the open function, GET-type of request, url, true-asynchronous
+//   xhr.open('GET', 'https://api.myjson.com/bins/swafm', true)
+//   //call the onload 
+//   xhr.onload = function() 
+//       {
+//           //check if the status is 200(means everything is okay)
+//           if (this.status === 200) 
+//               {
+//                   //return server response as an object with JSON.parse
+//                   var output = JSON.parse(this.responseText);
+//                   document.getElementById('ajax').innerHTML = output;
+//       }
+//               }
   //call send
-  xhr.send();
+  //xhr.send();
   //Common Types of HTTP Statuses
   // 200: OK
   // 404: ERROR

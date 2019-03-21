@@ -59,6 +59,8 @@
   // 403: FORBIDDEN
   var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function(){
+      var randomNumber = Math.floor(math.random() = (quotes.length));
+      var randomQuote = document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];  
        if(this.readyState == 4 && this.status == 200) {
          var response = JSON.parse(xhttp.responseText);
          var quote = response.quote;    
@@ -67,10 +69,6 @@
            output += "<li>" + quote[i].quote + "</li>";
          }
          document.getElementById('thought').innerHTML = output;
-       }
-       function newQuote(){
-          var randomNumber = Math.floor(math.random() = (quotes.length));
-          document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
        }
      };
      xhttp.open("GET", "quote.json", true);

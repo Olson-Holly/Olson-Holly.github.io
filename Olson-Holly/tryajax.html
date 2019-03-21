@@ -66,7 +66,7 @@
       xhttp.onreadystatechange = function(){
        if(this.readyState == 4 && this.status == 200) {
          var response = JSON.parse(xhttp.responseText);
-         var animal = response.thought;    
+         var quotes = response.quotes;    
          var output = "";
          for(var i=0; i<thought.length;i++) {
            output += "<li>" + thought[i].quote + "</li>";

@@ -73,6 +73,18 @@
             height: 160px;
             transform: rotate(-1440deg);
         } 
+        #libs{
+            width: 100px;
+            height: 100px;
+            /* padding-top: 15px;
+            padding-left: 15px; */
+            transition: width 3s, height 3s, transform 3s;
+            }
+        #libs:hover{
+            width: 200px;
+            height: 160px;
+            transform: rotate(-1440deg);
+        }
         #wrapper {
           display: grid;
           grid-template-columns: 170px 170px;
@@ -385,7 +397,7 @@ function myLibs() {
   <button onclick="reSet()">Reset Form</button>
   <div id="demo"></div>
 
-  <h4><img id="lib" src="funny.jfif" alt="Smiley face" height="100" width="100">#2 Lib</h4>
+  <h4><img id="libs" src="funny.jfif" alt="Smiley face" height="100" width="100">#2 Lib</h4>
   <form id="myLibs">
   <div id="wrapper">  
   <div id="box a">Animal: <input type="text" id="animals" value=""></div>
@@ -433,7 +445,7 @@ function myLibs() {
   <button onclick="reseT()">Reset Form</button>
   <div id="madlib"></div>
 
-  <h4><img id="lib" src="goodjob.jfif" alt="Smiley face" height="100" width="100">#4 Lib</h4>
+  <h4><img id="libs" src="goodjob.jfif" alt="Smiley face" height="100" width="100">#4 Lib</h4>
   <form id="mymads">
   <div id="wrapper"> 
      <div id="box a">Boy or Girl: <input type="text" id="child" value=""></div>

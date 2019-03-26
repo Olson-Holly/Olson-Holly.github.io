@@ -63,7 +63,7 @@
        if(this.readyState == 4 && this.status == 200) {
          var response = JSON.parse(xhttp.responseText);
          var quote = response.quote;    
-        //  var output = "";
+         var output = "";
         //  for(var i=0; i<quote.length;i++) {
         //    output += "<li>" + quote[i].quote + "</li>";
         
@@ -71,13 +71,13 @@
       // }
 
       // function shuffle(array) {
-        var output = quote.length, temporaryValue, randomOutput;
-        while (0 !== output) {
-          randomOutput = Math.floor(Math.random() * output);
-          output -= 1;
+        var value = quote.length, temporaryValue, randomOutput;
+        while (0 !== value) {
+          randomOutput = Math.floor(Math.random() * value);
+          value -= 1;
 
-        temporaryValue = array[output];
-        array[output] = array[randomOutput];
+        temporaryValue = array[value];
+        array[value] = array[randomOutput];
         array[randomOutput] = temporaryValue;
         }
         return array;  
@@ -95,10 +95,8 @@
 </script>
 </head>
 <body>
-    <p>a list of funny quotes</p>
-    <div id="thought"></div>
     <h1>Simple Quote Generator</h1>
     <div id="thought"></div>
-  <button onclick="shuffle(array)">New quote</button>
+  <button onclick="shuffle()">New quote</button>
 </body>
 </html>

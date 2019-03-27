@@ -59,6 +59,7 @@
   // 403: FORBIDDEN
   
   var xhttp = new XMLHttpRequest();
+  
       xhttp.onreadystatechange = function(){
        if(this.readyState == 4 && this.status == 200) {
          var response = JSON.parse(xhttp.responseText);
@@ -91,7 +92,23 @@
         arr = shuffle(arr);
         document.getElementById('shuffle').innerHTML = arr;
  
-     
+     var myRequest = new XMLHttprequest();
+     myRequest.open('GET', 'quote.json');
+     myRequest.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200) {
+        //  var response = JSON.parse(myRequest.responseText);
+        //  var quote = response.quote;    
+        //  var output = "";
+        //  for(var i=0; i<quote.length;i++) {
+        //    output += "<li>" + quote[i].quote + "</li>";
+        
+        document.getElementById('response').innerHTML = myRequest.responseText;
+     }
+     };
+     function sendTheAjax(){
+       myRequest.send();
+       document.getElementById('reveal').style.display = 'none';
+     }
      
    
     
@@ -105,5 +122,9 @@
     
     <div id="shuffle"></div>
   <button onclick="shuffle()">New quote</button>
+  <h1>will it show the quotes one at a time</h1>
+  <button id="revesal">fdsafds</button>
+  <div id="response"></div>
+  <button id="reveal" onclick="sendTheAjax()" class="button">sdfas</button>
 </body>
 </html>

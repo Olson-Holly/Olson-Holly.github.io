@@ -64,13 +64,16 @@
          var response = JSON.parse(xhttp.responseText);
          var quote = response.quote;    
          var output = "";
-        //  for(var i=0; i<quote.length;i++) {
-        //    output += "<li>" + quote[i].quote + "</li>";
+         for(var i=0; i<quote.length;i++) {
+           output += "<li>" + quote[i].quote + "</li>";
         
-      //   document.getElementById('thought').innerHTML = output;
-      // }
-
-      // function shuffle(array) {
+        document.getElementById('thought').innerHTML = output;
+      }
+       }
+       };
+     xhttp.open("GET", "quote.json", true);
+     xhttp.send();
+      function shuffle(array) {
         var value = quote.length, temporaryValue, randomOutput;
         while (0 !== value) {
           randomOutput = Math.floor(Math.random() * value);
@@ -86,11 +89,10 @@
         var arr = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
         arr = shuffle(arr);
         document.getElementById('thought').innerHTML = arr;
-      }
-      };
+     
+     
    
-     xhttp.open("GET", "quote.json", true);
-     xhttp.send();
+    
   
 </script>
 </head>

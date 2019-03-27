@@ -76,7 +76,7 @@
        if(this.readyState == 4 && this.status == 200) {
          var response = JSON.parse(xhttp.responseText);
          var quote = response.quote;    
-         var shuffle = "";
+         shuffle = "";
          
        document.getElementById('thought').innerHTML = shuffle;
        }

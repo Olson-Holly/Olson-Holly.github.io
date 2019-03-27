@@ -58,28 +58,27 @@
   // 404: ERROR
   // 403: FORBIDDEN
   function shuffle(array){
-  var xhttp = new XMLHttpRequest();
-  
-      xhttp.onreadystatechange = function(){
-       if(this.readyState == 4 && this.status == 200) {
-         var response = JSON.parse(xhttp.responseText);
-         var quote = response.quote;    
-         var output = "";
-         var value = quote.length, temporaryValue, randomOutput;
-        //  for(var i=0; i<quote.length;i++) {
-        //    output += "<li>" + quote[i].quote + "</li>";
-        while (0 !== value) {
+    var value = quote.length, temporaryValue, randomOutput;
+    while (0 !== value) {
           randomOutput = Math.floor(Math.random() * value);
           value -= 1;
-          temporaryValue = array[value];
+        temporaryValue = array[value];
         array[value] = array[randomOutput];
         array[randomOutput] = temporaryValue;
         }
         return array;
         var arr = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
         arr = shuffle(arr);
-        document.getElementById('shuffle').innerHTML = arr;
-        // document.getElementById('thought').innerHTML = output;
+       var shuffle = document.getElementById('shuffle').innerHTML = arr;
+     var xhttp = new XMLHttpRequest();
+  
+      xhttp.onreadystatechange = function(){
+       if(this.readyState == 4 && this.status == 200) {
+         var response = JSON.parse(xhttp.responseText);
+         var quote = response.quote;    
+         var shuffle = "";
+         
+       document.getElementById('thought').innerHTML = shuffle;
        }
        }
        };
@@ -92,9 +91,8 @@
     <!-- <p>A list of funny quotes</p>
     <div id="thought"></div> -->
     <h1>Simple Quote Generator</h1>
-    
-    <div id="shuffle"></div>
-  <button onclick="shuffle()">New quote</button>
+    <div id="thought"></div>
+    <button onclick="shuffle(array)">New quote</button>
   
 </body>
 </html>

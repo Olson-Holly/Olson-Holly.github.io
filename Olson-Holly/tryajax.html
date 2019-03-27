@@ -57,7 +57,7 @@
   // 200: OK
   // 404: ERROR
   // 403: FORBIDDEN
-  
+  function shuffle(array){
   var xhttp = new XMLHttpRequest();
   
       xhttp.onreadystatechange = function(){
@@ -65,66 +65,36 @@
          var response = JSON.parse(xhttp.responseText);
          var quote = response.quote;    
          var output = "";
-         for(var i=0; i<quote.length;i++) {
-           output += "<li>" + quote[i].quote + "</li>";
-        
-        document.getElementById('thought').innerHTML = output;
-      }
+         var value = quote.length, temporaryValue, randomOutput;
+        //  for(var i=0; i<quote.length;i++) {
+        //    output += "<li>" + quote[i].quote + "</li>";
+        while (0 !== value) {
+          randomOutput = Math.floor(Math.random() * value);
+          value -= 1;
+          temporaryValue = array[value];
+        array[value] = array[randomOutput];
+        array[randomOutput] = temporaryValue;
+        }
+        return array;
+        var arr = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+        arr = shuffle(arr);
+        document.getElementById('shuffle').innerHTML = arr;
+        // document.getElementById('thought').innerHTML = output;
+       }
        }
        };
      xhttp.open("GET", "quote.json", true);
      xhttp.send();
 
-      function shuffle(array) {
-        var value = quote.length, temporaryValue, randomOutput;
-        while (0 !== value) {
-          randomOutput = Math.floor(Math.random() * value);
-          value -= 1;
-
-        temporaryValue = array[value];
-        array[value] = array[randomOutput];
-        array[randomOutput] = temporaryValue;
-        }
-        return array;  
-
-        }
-        var arr = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
-        arr = shuffle(arr);
-        document.getElementById('shuffle').innerHTML = arr;
- 
-     var myRequest = new XMLHttprequest();
-     myRequest.open('GET', 'quote.json');
-     myRequest.onreadystatechange = function(){
-      if(this.readyState == 4 && this.status == 200) {
-        //  var response = JSON.parse(myRequest.responseText);
-        //  var quote = response.quote;    
-        //  var output = "";
-        //  for(var i=0; i<quote.length;i++) {
-        //    output += "<li>" + quote[i].quote + "</li>";
-        
-        document.getElementById('response').innerHTML = myRequest.responseText;
-     }
-     };
-     function sendTheAjax(){
-       myRequest.send();
-       document.getElementById('reveal').style.display = 'none';
-     }
-     
-   
-    
-  
 </script>
 </head>
 <body>
-    <p>A list of funny quotes</p>
-    <div id="thought"></div>
+    <!-- <p>A list of funny quotes</p>
+    <div id="thought"></div> -->
     <h1>Simple Quote Generator</h1>
     
     <div id="shuffle"></div>
   <button onclick="shuffle()">New quote</button>
-  <h1>will it show the quotes one at a time</h1>
-  <button id="revesal">fdsafds</button>
-  <div id="response"></div>
-  <button id="reveal" onclick="sendTheAjax()" class="button">sdfas</button>
+  
 </body>
 </html>

@@ -13,7 +13,7 @@
           margin-bottom: 10px;
           margin-left: 60px;
         }
-        #demo, #demos, #madlib, #madlibs, #myholly, #output{
+        #demo, #demos, #madlib, #madlibs, #myholly, #output, #thought{
           margin-bottom: 50px;
           background: rgb(244, 247, 231);
           border: .5px solid black;
@@ -25,16 +25,6 @@
           margin-top: 30px;
         }
         #thought{
-          margin-bottom: 50px;
-          background: rgb(244, 247, 231);
-          border: 3px solid rgb(151, 67, 67);
-          color: rgb(0, 128, 49);
-          font-family: 'ZCOOL QingKe HuangYou';
-          width: 420px;
-          margin-left: 10px;
-          padding: 17px;
-          margin-top: 30px;
-          font-size: 25px;
           font-family: 'ZCOOL QingKe HuangYou';
         }
         p{
@@ -360,8 +350,7 @@ function myLibs() {
          var quote = response.quote;
          var randomIndex = Math.floor(Math.random() * quote.length);
          var output = "";
-        //  for(var i=0; i<quote.length;i++) {
-          output += "<p>" + quote[randomIndex] + "</p>";
+         output += "<p>" + quote[randomIndex] + "</p>";
         document.getElementById('thought').innerHTML = output;
        };
       }

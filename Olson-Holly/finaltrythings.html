@@ -352,20 +352,23 @@ function myLibs() {
   function hOlly() {
     document.getElementById("hOlly").reset();
   }
-  var xhttp = new XMLHttpRequest();
+  function displayQuote(){
+     var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function(){
        if(this.readyState == 4 && this.status == 200) {
          var response = JSON.parse(xhttp.responseText);
-         var quote = response.quote;    
+         var quote = response.quote;
+         var randomIndex = Math.floor(Math.random() * quote.length);
          var output = "";
-         for(var i=0; i<quote.length;i++) {
-           output += "<li>" + quote[i].quote + "</li>";
+        //  for(var i=0; i<quote.length;i++) {
+          output += "<p>" + quote[randomIndex] + "</p>";
         document.getElementById('thought').innerHTML = output;
        };
       }
-      }
+     
      xhttp.open("GET", "quote.json", true);
      xhttp.send();
+     }
  </script>
 </head>
 <body>
@@ -494,8 +497,8 @@ function myLibs() {
   <button onclick="hOlly()">Reset Form</button>
   <div id="myholly"></div>
   <h1><img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142">FUNNY!!</h1>
-  <h1>A list of funny quotes</h1>
-  <p>(using AJAX)</p>
-  <div id="thought"></div>
+  <h1>Simple Quote Generator</h1>
+    <div id="thought"></div>
+    <button onclick="displayQuote()">New quote</button>
 </body>
 </html>

@@ -58,18 +58,18 @@
   // 404: ERROR
   // 403: FORBIDDEN
   function shuffle(array){
-    // var value = quote.length, temporaryValue, randomOutput;
-    // while (0 !== value) {
-    //       randomOutput = Math.floor(Math.random() * value);
-    //       value -= 1;
-    //     temporaryValue = array[value];
-    //     array[value] = array[randomOutput];
-    //     array[randomOutput] = temporaryValue;
-    //     }
-    //     return array;
-    //     var arr = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
-    //     arr = shuffle(arr);
-      //  var shuffle = document.getElementById('shuffle').innerHTML = arr;
+     var value = quote.length, temporaryValue, randomOutput;
+    while (0 !== value) {
+          randomOutput = Math.floor(Math.random() * value);
+          value -= 1;
+        temporaryValue = array[value];
+        array[value] = array[randomOutput];
+        array[randomOutput] = temporaryValue;
+        }
+        return array;
+        var arr = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+        arr = shuffle(arr);
+       var shuffle = document.getElementById('shuffle').innerHTML = arr;
      var xhttp = new XMLHttpRequest();
   
       xhttp.onreadystatechange = function(){
@@ -82,6 +82,23 @@
        }
        }
        };
+     xhttp.open("GET", "quote.json", true);
+     xhttp.send();
+
+
+     var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function(){
+       if(this.readyState == 4 && this.status == 200) {
+         var response = JSON.parse(xhttp.responseText);
+         var quote = response.quote;
+         console.log(quote);    
+         var output = "";
+         for(var i=0; i<quote.length;i++) {
+           output += "<li>" + quote[i].quote + "</li>";
+        document.getElementById('thought').innerHTML = output;
+       };
+      }
+      }
      xhttp.open("GET", "quote.json", true);
      xhttp.send();
 

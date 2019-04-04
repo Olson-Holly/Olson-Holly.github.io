@@ -4,15 +4,17 @@
 <meta charset="utf-8">
 <title></title>
 <style>
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2){
          body{
             margin-left: 10px;
             border: 20px solid olivedrab;
-            Font-size: 25px;
         }
         button{
           margin-bottom: 10px;
           margin-left: 60px;
-          Font-size: 25px;
         }
         #demo, #demos, #madlib, #madlibs, #myholly, #output, #thought{
           margin-bottom: 50px;
@@ -75,7 +77,7 @@
         } 
         #wrapper {
           display: grid;
-          grid-template-columns: 170px;
+          grid-template-columns: 120px;
           grid-gap: 10px;
           background-color: #fff;
           color: #444;
@@ -86,9 +88,8 @@
          color: #fff;
          border-radius: 5px;
          padding: 20px;
-         font-size: 25px;
         }
-       
+      }    
 </style>
 <script type="text/javascript">
 

@@ -4,61 +4,15 @@
 <meta charset="utf-8">
 <title></title>
 <style>
- @media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 812px) {
-  button{
-          margin-bottom: 10px;
-          margin-left: 60px;
-          font-size: 20px;
-        } 
-        #demo, #demos, #madlib, #madlibs, #myholly, #output, #thought{
-          margin-bottom: 50px;
-          background: rgb(244, 247, 231);
-          border: .5px solid black;
-          color: navy;
-          font-family: 'ZCOOL QingKe HuangYou';
-          width: 300px;
-          margin-left: 60px;
-          padding: 17px;
-          margin-top: 30px;
-          font-size: 20px;
-        } 
-        h1{
-            color: rgb(77, 71, 10);
-            font-family: 'ZCOOL QingKe HuangYou';
-            padding-left: 60px;
-            font-size: 40px;
-        }
-        h3, h4{
-            padding-left: 60px;
-            color: rgb(77, 71, 10);
-            font-size: 30px;
-        } 
-        #wrapper {
-          display: grid;
-          grid-template-columns: 300px;
-          /* grid-gap: 10px; */
-          background-color: #fff;
-          color: #444;
-          margin-left: 60px;
-        }
-      #box {
-         background-color: #444;
-         color: #fff;
-         border-radius: 5px;
-         padding: 20px;
-         font-size: 25px;
-        }                   
- } 
-        body{
+         body{
             margin-left: 10px;
             border: 20px solid olivedrab;
-
+            Font-size: 25px;
         }
         button{
           margin-bottom: 10px;
           margin-left: 60px;
+          Font-size: 25px;
         }
         #demo, #demos, #madlib, #madlibs, #myholly, #output, #thought{
           margin-bottom: 50px;
@@ -121,7 +75,7 @@ and (max-device-width : 812px) {
         } 
         #wrapper {
           display: grid;
-          grid-template-columns: 170px 170px;
+          grid-template-columns: 170px;
           grid-gap: 10px;
           background-color: #fff;
           color: #444;
@@ -132,7 +86,7 @@ and (max-device-width : 812px) {
          color: #fff;
          border-radius: 5px;
          padding: 20px;
-         font-size: 150%;
+         font-size: 25px;
         }
        
 </style>
@@ -500,7 +454,6 @@ function myLibs() {
   <button onclick="hOlly()">Reset Form</button>
   <div id="myholly"></div>
   <h1><img id="crazy" src="crazy.jfif" alt="Smiley face" height="142" width="142">FUNNY!!</h1>
-  <h1>Push the button for a funny quote</h1>
   <button onclick="displayQuote()">funny quote</button>
   <div id="thought"></div>
 </body>
